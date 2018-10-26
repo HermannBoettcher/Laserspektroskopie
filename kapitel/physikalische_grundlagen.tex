@@ -3,35 +3,67 @@
 \begin{document}
   \chapter{Physikalische Grundlagen}
 
-    \section{Feinstruktur und Hyperfeinstruktur von Caesium}
+    \section{Zeemann Effekt}
+    \label{sec:zeemann}
+
+
+    \section{Spin-Bahn-Kopplung und Feinstruktur}
     \label{sec:feinstruktur}
 
-      Nach dem klassischen Atommodell bewegen sich Elektronen auf Kreisbahnen um den Atomkern. Gemäß den \textsc{Maxwell}-Gleichungen erzeugt ein Kreisstrom ein magnetisches Dipolmoment. Somit hat ein Elektron welches um einen Atomkern (Kernladungszahl $Z$) kreist (Kreisbahnradius $r$) ein magnetisches Moment
+      Im semiklassischen Modell bewegen sich die Elektronen auf diskreten Kreisbahnen mit Radius $r$ um den Atomkern. Als Ladungsträger mit Ladung $q_e=-e$ stellt das rotierende Elektron einen Kreisstrom dar. Dieser erzeugt ein magnetisches Dipolmoment
       \begin{equation*}
-        \vec{\mu}=-\underbrace{\frac{e\hslash}{2m_e}}_{=\mu_\mathrm{Bohr}}\frac{\vec{l}}{\hslash}
+        \vec{\mu}_l=-\underbrace{\frac{e\hslash}{2m_e}}_{=\mu_\mathrm{Bohr}}\frac{\vec{l}}{\hslash}
       \end{equation*}
-      mit der Elektronenladung $e$, der Elektronenmasse $m_e$ und dem Bandrehimpuls $\vec{l}$. $\mu_\mathrm{Bohr}$ wird hierbei als \textsc{Bohr}'sches  Magneton bezeichnet.
+      mit dem \textsc{Bohr}'schen Magneton, welches sich neben der Elektronenladung aus der Elektronenmasse $m_e$ und dem reduzierten \textsc{Planck}'schen Wirkungsquantum zusammensetzt. Weiter ist $\vec{l}$ der Bahndrehimpuls des Elektrons.
 
-      Unter Berücksichtigung des \textsc{Thomas}-Faktors entsteht eine Energieaufspaltung in Abhängigkeit vom Elektronenspin $\vec{s}$ und dem Bahndrehimpuls $l$
+      Aus dem quantenmechanischen Modell ergibt sich außerdem das magnetische Moment
       \begin{equation*}
-        E_{n,l,s}=E_n + \frac{\mu_0 \mu_\mathrm{Bohr}^2 Z}{2 \pi r^3}\left(\vec{s}\cdot \vec{l}\right)/\hslash^2
+        \vec{\mu}_s=-2\mu_\mathrm{Bohr}\frac{\vec{s}}{\hslash},
       \end{equation*}
-      wobei $E_n$ der Energieterm ohne Berücksichtigung weiterer Quantenzahlen ist und $\mu_0$ die magnetische Suszeptibilität im Vacuum. Mit dem Gesamtdrehimpuls
-      \begin{equation*}
-        \vec{j}=\vec{l}+\vec{s},\quad |\vec{j}|=\sqrt{j(j+1)}\cdot \hslash
-      \end{equation*}
-      ergibt sich die Darstellung
+      welchem der Spindrehimpuls $\vec{s}$ zugrunde liegt.
+
+      Das magnetische Moment $\vec{\mu}_s$ des rotierenden Elektrons befindet sich nun im durch die Rotation erzeugten Magnetfeld $\vec{B}$. Je nach Spinstellung führt dies zur einer Erhöhung bzw. einer Verringerung der Energie
       \begin{equation}
-        E_{n,l,j}=E_n+\frac{a}{2}\cdot \left[j(j+1)-l(l+1)-s(s+1)\right]
+        \Delta E_{l,s}=-\vec{\mu}_s\cdot \vec{B}\approx \frac{\mu_0Z\cdot e^2}{8\pi m_e^4r^3}\left( \vec{s}\cdot \vec{l}).
+        \label{eq:feinstruktur-1}
+      \end{equation}
+      Hierbei ist $\mu_0$ die magnetische Suszeptibilität und $Z$ die Ordnungszahl des Atoms.
+
+      Die vektorielle Addition von Bahndrehimpuls und Spindrehimpuls ergibt den Gesamtdrehimpuls
+      \begin{equation*}
+        \vec{j}=\vec{l}+\vec{s}.
+      \end{equation*}
+      Wie Bahndrehimpuls und Spindrehimpuls ist der Gesamtdrehimpuls gequantelt. Es gilt
+      \begin{equation*}
+        |\vec{j}|=\sqrt{j(j+1)}\cdot \hslash
+      \end{equation*}
+      wobei
+      \begin{equation*}
+        j=+\frac{1}{2} \quad \text{für} \quad l=0
+      \end{equation*}
+      und
+      \begin{equation*}
+        j=l\pm \frac{1}{2} \quad \text{für} \quad l>0,
+      \end{equation*}
+      da sich die $z$-Komponenten der Drehimpulse entweder parallel oder antiparallel einstellen können.
+
+      Nun lässt sich \eqref{eq:feinstruktur-1} umschreiben zu
+      \begin{equation}
+        \Delta E_{l,j}=\frac{a}{2}\cdot \left[j(j+1)-l(l+1)-s(s+1)\right]
       \end{equation}
       mit der Spin-Bahn-Kopplungskonstante
       \begin{equation*}
-        a=\frac{\mu_0 Z\mu_\mathrm{Bohr}^2}{2\pi r^3}.
+        a=\frac{\mu_0 Z e^2\hslash ^2}{8\pi m_e^2r^3}.
       \end{equation*}
-      Obige Ausführungen sind an \cite{dem:exp3-feinstruktur} angelehnt, wo eine ausführliche Herleitung zu finden ist.
+      Die Aufspaltung der Spektrallinien gemäß
+      \begin{equation}
+        E_{n,l,j}=E_n + \Delta E_{l,j}
+      \end{equation}
+      ist die sogenannte Feinstrukturaufspaltung.
 
-    \section{Cs 133}
 
+    \section{Hyperfeinstruktur}
+    \label{sec:hyperfeinstruktur}
 
 
 \end{document}
