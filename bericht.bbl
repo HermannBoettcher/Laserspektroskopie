@@ -1,0 +1,49 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 2.6 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{dem:exp3-feinstruktur}{inbook}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Demtröder}{D.}%
+     {Wolfgang}{W.}%
+     {}{}%
+     {}{}}%
+  }
+  \name{editor}{1}{}{%
+    {{}%
+     {Demtröder}{D.}%
+     {Wolfgang}{W.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Springer Spektrum}%
+  }
+  \strng{namehash}{DW1}
+  \strng{fullhash}{DW1}
+  \field{sortinit}{D}
+  \field{chapter}{5}
+  \field{pages}{158f.}
+  \field{title}{Experimentalphysik 3: Atome, Moleküle und Festkörper}
+  \field{year}{2015}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput

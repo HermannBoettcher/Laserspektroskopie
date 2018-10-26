@@ -3,6 +3,35 @@
 \begin{document}
   \chapter{Physikalische Grundlagen}
 
+    \section{Feinstruktur und Hyperfeinstruktur von Caesium}
+    \label{sec:feinstruktur}
+
+      Nach dem klassischen Atommodell bewegen sich Elektronen auf Kreisbahnen um den Atomkern. Gemäß den \textsc{Maxwell}-Gleichungen erzeugt ein Kreisstrom ein magnetisches Dipolmoment. Somit hat ein Elektron welches um einen Atomkern (Kernladungszahl $Z$) kreist (Kreisbahnradius $r$) ein magnetisches Moment
+      \begin{equation*}
+        \vec{\mu}=-\underbrace{\frac{e\hslash}{2m_e}}_{=\mu_\mathrm{Bohr}}\frac{\vec{l}}{\hslash}
+      \end{equation*}
+      mit der Elektronenladung $e$, der Elektronenmasse $m_e$ und dem Bandrehimpuls $\vec{l}$. $\mu_\mathrm{Bohr}$ wird hierbei als \textsc{Bohr}'sches  Magneton bezeichnet.
+
+      Unter Berücksichtigung des \textsc{Thomas}-Faktors entsteht eine Energieaufspaltung in Abhängigkeit vom Elektronenspin $\vec{s}$ und dem Bahndrehimpuls $l$
+      \begin{equation*}
+        E_{n,l,s}=E_n + \frac{\mu_0 \mu_\mathrm{Bohr}^2 Z}{2 \pi r^3}\left(\vec{s}\cdot \vec{l}\right)/\hslash^2
+      \end{equation*}
+      wobei $E_n$ der Energieterm ohne Berücksichtigung weiterer Quantenzahlen ist und $\mu_0$ die magnetische Suszeptibilität im Vacuum. Mit dem Gesamtdrehimpuls
+      \begin{equation*}
+        \vec{j}=\vec{l}+\vec{s},\quad |\vec{j}|=\sqrt{j(j+1)}\cdot \hslash
+      \end{equation*}
+      ergibt sich die Darstellung
+      \begin{equation}
+        E_{n,l,j}=E_n+\frac{a}{2}\cdot \left[j(j+1)-l(l+1)-s(s+1)\right]
+      \end{equation}
+      mit der Spin-Bahn-Kopplungskonstante
+      \begin{equation*}
+        a=\frac{\mu_0 Z\mu_\mathrm{Bohr}^2}{2\pi r^3}.
+      \end{equation*}
+      Obige Ausführungen sind an \cite{dem:exp3-feinstruktur} angelehnt, wo eine ausführliche Herleitung zu finden ist.
+
+    \section{Cs 133}
+
 
 
 \end{document}

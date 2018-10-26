@@ -73,7 +73,7 @@
 
 %\usepackage{themeKonstanzXelatexAddOn} % XeLaTeX mit Schriftart Arial, VOR dem Standardpaket importieren
 \usepackage{themeKonstanz} % Muss immer verwendet werden (Standardpaket)
-%\usepackage{themeKonstanzStyleAddOn} % Style Add-On für andere Überschriften, NACH dem Standardpaket importieren
+\usepackage{themeKonstanzStyleAddOn} % Style Add-On für andere Überschriften, NACH dem Standardpaket importieren
 
 
 
@@ -445,6 +445,10 @@
 \pagenumbering{arabic}
 
 \subfile{kapitel/physikalische_grundlagen.tex}
+
+
+\printbibliography
+\addcontentsline{toc}{chapter}{Bibliographie}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Ende vom Dokument                                     %
