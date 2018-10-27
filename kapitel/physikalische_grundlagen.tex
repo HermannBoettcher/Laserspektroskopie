@@ -3,111 +3,153 @@
 \begin{document}
   \chapter{Physikalische Grundlagen}
 
-    \section{Zeeman Effekt}
-    \label{sec:zeeman}
 
-      Der \textsc{Zeeman} Effekt beschreibt die beobachtete Energieaufspaltung der entarteten $E_{n,l,m}$-Zustände der Elektronen in der Atomschale in $m$ Subniveaus in einem externen Magnetfeld $\vec{B}$, wobei $n,l,m$ die bekannten Quantenzahlen sind. Nach dem semiklassischen Modell bewegen sich die Elektronen auf einer Kreisbahn um den Atomkern. Hierdurch wird ein Kreisstrom und damit ein magnetisches Moment
-      \begin{equation*}
-        \vec{p}_m=-\frac{e}{2m_e}\cdot \vec{l},
-      \end{equation*}
-      mit dem Bahndrehimpuls des Elektrons $\vec{l}$, der Elementarladung $e$ und der Elektronenmasse $m_e$, erzeugt, welches mit dem Feld $\vec{B}$ wechselwirkt. Die magnetische Quantenzahl $m$ kann die Werte
-      \begin{equation*}
-        -l \le m \le +l
-      \end{equation*}
-      annehmen. Damit spalten die Energieniveaus $E_{n,l,m}$ gemä\ss
-      \begin{equation}
-        E_{n,l,m}=E_\mathrm{Coul}(n,l)+\underbrace{\frac{e\hslash}{2m_e}}_{=\mu_\mathrm{Bohr}}\cdot mB
-      \end{equation}
-      in $(2l+1)$ Komponenten auf. $\mu_\mathrm{Bohr}$ wird als \textsc{Bohr}'sches Magneton bezeichnet. Die \textit{\textsc{Zeeman}-Aufspaltung} der Spektrallinien ist unabhängig von $n,l$ und damit äquidistant
-      \begin{equation}
-        \Delta E=\mu_\mathrm{Bohr}\cdot B.
-      \end{equation}
-      Ausführlich inklusive der Erklärung der erlaubten Übergänge wird der \textsc{Zeeman} Effekt in \cite{dem:exp3-normaler-zeeman} beschrieben, obige Beschreibung enthält Auszüge.
+    \section{Termschema und Spektrallinien von Caesium}
 
 
-    \section{Spin-Bahn-Kopplung und Feinstruktur}
-    \label{sec:feinstruktur}
-
-      Zusätzlich zu dem aus der Bahnbewegung des Elektrons resultierenden magnetischen Moment ergibt sich aus dem quantenmechanischen Modell das magnetische Moment
-      \begin{equation*}
-        \vec{\mu}_s=-2\mu_\mathrm{Bohr}\frac{\vec{s}}{\hslash},
-      \end{equation*}
-      welchem der Spindrehimpuls $\vec{s}$ zugrunde liegt.
-
-      Das magnetische Moment $\vec{\mu}_s$ des rotierenden Elektrons befindet sich nun im durch die Rotation erzeugten Magnetfeld $\vec{B}$. Je nach Spineinstellung führt dies zur einer Erhöhung bzw. einer Verringerung der Energie
-      \begin{equation}
-        \Delta E_{l,s}=-\vec{\mu}_s\cdot \vec{B}\approx \frac{\mu_0Z\cdot e^2}{8\pi m_e^4r^3}\left( \vec{s}\cdot \vec{l}\right).
-        \label{eq:feinstruktur-1}
-      \end{equation}
-      Hierbei ist $\mu_0$ die magnetische Suszeptibilität und $Z$ die Ordnungszahl des Atoms.
-
-      Die vektorielle Addition von Bahndrehimpuls und Spindrehimpuls ergibt den Gesamtdrehimpuls
-      \begin{equation*}
-        \vec{j}=\vec{l}+\vec{s}.
-      \end{equation*}
-      Wie Bahndrehimpuls und Spindrehimpuls ist der Gesamtdrehimpuls gequantelt. Es gilt
-      \begin{equation*}
-        |\vec{j}|=\sqrt{j(j+1)}\cdot \hslash
-      \end{equation*}
-      wobei
-      \begin{equation*}
-        j=+\frac{1}{2} \quad \text{für} \quad l=0
-      \end{equation*}
-      und
-      \begin{equation*}
-        j=l\pm \frac{1}{2} \quad \text{für} \quad l>0,
-      \end{equation*}
-      da sich die $z$-Komponenten der Drehimpulse entweder parallel oder antiparallel einstellen können.
-
-      Nun lässt sich \eqref{eq:feinstruktur-1} umschreiben zu
-      \begin{equation}
-        \Delta E_{l,j}=\frac{a}{2}\cdot \left[j(j+1)-l(l+1)-s(s+1)\right]
-      \end{equation}
-      mit der Spin-Bahn-Kopplungskonstante
-      \begin{equation*}
-        a=\frac{\mu_0 Z e^2\hslash ^2}{8\pi m_e^2r^3}.
-      \end{equation*}
-      Die Aufspaltung der Spektrallinien gemä\ss
-      \begin{equation}
-        E_{n,l,j}=E_n + \Delta E_{l,j}
-      \end{equation}
-      ist die sogenannte \textit{Feinstrukturaufspaltung}.
-
-      Die vorangegangenen Ausführungen sind eine Kurzfassung von \cite{dem:exp3-feinstruktur}.
+      Im Versuch wird eine Gaskammer mit \ce{Cs133} verwendet. Um die erlaubten Übergänge und damit die Spektrallinien mit und ohne externes  Magnetfeld zu bestimmen müssen der normale \textsc{Zeeman} Effekt, die Feinstruktur und die Hyperfeinsturktur betrachtet werden.
 
 
-    \section{Hyperfeinstruktur}
-    \label{sec:hyperfeinstruktur}
+      \subsection{Normaler Zeeman Effekt}
+      \label{subsec:zeeman}
 
-      Analog zum Spin des Elektrons wird auch dem räumlich ausgedehnten Atomkern ein Spin zugeordnet, der sogenannte Kernspin $\vec{I}$. Mit der Kernspinquantenzahl $I$ wird die Quantelung des Kernspins gemä\ss
-      \begin{equation*}
-        |\vec{I}|=\sqrt{I(I+1)}\hslash.
-      \end{equation*}
-      Dabei kann die Projektion auf die $z$-Richtung die $(2I+1)$ Werte
-      \begin{equation*}
-        I_z=m_I\cdot \hslash \quad \text{mit}\quad -I\le m_I \le +I
-      \end{equation*}
-      annehmen. Das magnetische Kernmoment ergibt sich damit zu
-      \begin{equation*}
-        \vec{\mu}_I=\gamma_\mathrm{K}\cdot \vec{I}.
-      \end{equation*}
-      Das magnetische Kernmoment befindet sich im vom Elektron durch Bahnbewegung und Spinmoment erzeugten Magnetfeld $B_j$ und hat hierdurch die Energie
-      \begin{equation*}
-        E_{I,j}=-|\mu_I|\cdot B_j \cdot \cos \left( \sphericalangle \left( \vec{j}, \vec{I}\right) \right).
-      \end{equation*}
-      Mit dem Gesamtdrehimpuls des Atoms
-      \begin{equation*}
-        \vec{F} = \vec{j}+\vec{I}
-      \end{equation*}
-      spaltet sich damit jedes Energieniveau der Feinstruktur in der \textit{Hyperfeinstruktur} gemä\ss
-      \begin{equation}
-        E_{HFS}=E{n,l,j} + \frac{A}{2}\left[ F(F+1) - j(j+1) - I(I+1) \right],
-      \end{equation}
-      mit der Hyperfeinkonstante
-      \begin{equation*}
-        A=\frac{g_I \cdot \mu_\mathrm{K}\cdot B_j}{\sqrt{j(j+1)}}.
-      \end{equation*}
-      Die vollständige Herleitung ist in \cite{dem:exp3-hyperfeinstruktur} zu finden.
+        Der \textsc{Zeeman} Effekt beschreibt die beobachtete Energieaufspaltung der entarteten $E_{n,l,m}$-Zustände der Elektronen in der Atomschale in $m$ Subniveaus in einem externen Magnetfeld $\vec{B}$, wobei $n,l,m$ die bekannten Quantenzahlen sind. Nach dem semiklassischen Modell bewegen sich die Elektronen auf einer Kreisbahn um den Atomkern. Hierdurch wird ein Kreisstrom und damit ein magnetisches Moment
+        \begin{equation*}
+          \vec{p}_m=-\frac{e}{2m_e}\cdot \vec{l},
+        \end{equation*}
+        mit dem Bahndrehimpuls des Elektrons $\vec{l}$, der Elementarladung $e$ und der Elektronenmasse $m_e$, erzeugt, welches mit dem Feld $\vec{B}$ wechselwirkt. Die magnetische Quantenzahl $m$ kann die Werte
+        \begin{equation*}
+          -l \le m \le +l
+        \end{equation*}
+        annehmen. Damit spalten die Energieniveaus $E_{n,l,m}$ gemä\ss
+        \begin{equation}
+          E_{n,l,m}=E_\mathrm{Coul}(n,l)+\underbrace{\frac{e\hslash}{2m_e}}_{=\mu_\mathrm{Bohr}}\cdot mB
+        \end{equation}
+        in $(2l+1)$ Komponenten auf. $\mu_\mathrm{Bohr}$ wird als \textsc{Bohr}'sches Magneton bezeichnet. Die \textit{\textsc{Zeeman}-Aufspaltung} der Spektrallinien ist unabhängig von $n,l$ und damit äquidistant
+        \begin{equation}
+          \Delta E=\mu_\mathrm{Bohr}\cdot B.
+        \end{equation}
+        Ausführlich inklusive der Erklärung der erlaubten Übergänge wird der \textsc{Zeeman} Effekt in \cite{dem:exp3-normaler-zeeman} beschrieben, obige Beschreibung enthält Auszüge.
+
+
+      \subsection{Spin-Bahn-Kopplung und Feinstruktur}
+      \label{subsec:feinstruktur}
+
+        Zusätzlich zu dem aus der Bahnbewegung des Elektrons resultierenden magnetischen Moment ergibt sich aus dem quantenmechanischen Modell das magnetische Moment
+        \begin{equation*}
+          \vec{\mu}_s=-2\mu_\mathrm{Bohr}\frac{\vec{s}}{\hslash},
+        \end{equation*}
+        welchem der Spindrehimpuls $\vec{s}$ zugrunde liegt.
+
+        Das magnetische Moment $\vec{\mu}_s$ des rotierenden Elektrons befindet sich nun im durch die Rotation erzeugten Magnetfeld $\vec{B}$. Je nach Spineinstellung führt dies zur einer Erhöhung bzw. einer Verringerung der Energie
+        \begin{equation}
+          \Delta E_{l,s}=-\vec{\mu}_s\cdot \vec{B}\approx \frac{\mu_0Z\cdot e^2}{8\pi m_e^4r^3}\left( \vec{s}\cdot \vec{l}\right).
+          \label{eq:feinstruktur-1}
+        \end{equation}
+        Hierbei ist $\mu_0$ die magnetische Suszeptibilität und $Z$ die Ordnungszahl des Atoms.
+
+        Die vektorielle Addition von Bahndrehimpuls und Spindrehimpuls ergibt den Gesamtdrehimpuls
+        \begin{equation*}
+          \vec{j}=\vec{l}+\vec{s}.
+        \end{equation*}
+        Wie Bahndrehimpuls und Spindrehimpuls ist der Gesamtdrehimpuls gequantelt. Es gilt
+        \begin{equation*}
+          |\vec{j}|=\sqrt{j(j+1)}\cdot \hslash
+        \end{equation*}
+        wobei
+        \begin{equation*}
+          j=+\frac{1}{2} \quad \text{für} \quad l=0
+        \end{equation*}
+        und
+        \begin{equation*}
+          j=l\pm \frac{1}{2} \quad \text{für} \quad l>0,
+        \end{equation*}
+        da sich die $z$-Komponenten der Drehimpulse entweder parallel oder antiparallel einstellen können.
+
+        Nun lässt sich \eqref{eq:feinstruktur-1} umschreiben zu
+        \begin{equation}
+          \Delta E_{l,j}=\frac{a}{2}\cdot \left[j(j+1)-l(l+1)-s(s+1)\right]
+        \end{equation}
+        mit der Spin-Bahn-Kopplungskonstante
+        \begin{equation*}
+          a=\frac{\mu_0 Z e^2\hslash ^2}{8\pi m_e^2r^3}.
+        \end{equation*}
+        Die Aufspaltung der Spektrallinien gemä\ss
+        \begin{equation}
+          E_{n,l,j}=E_n + \Delta E_{l,j}
+        \end{equation}
+        ist die sogenannte \textit{Feinstrukturaufspaltung}.
+
+        Die vorangegangenen Ausführungen sind eine Kurzfassung von \cite{dem:exp3-feinstruktur}.
+
+
+      \subsection{Hyperfeinstruktur}
+      \label{subsec:hyperfeinstruktur}
+
+        Analog zum Spin des Elektrons wird auch dem räumlich ausgedehnten Atomkern ein Spin zugeordnet, der sogenannte Kernspin $\vec{I}$. Mit der Kernspinquantenzahl $I$ wird die Quantelung des Kernspins gemä\ss
+        \begin{equation*}
+          |\vec{I}|=\sqrt{I(I+1)}\hslash.
+        \end{equation*}
+        Dabei kann die Projektion auf die $z$-Richtung die $(2I+1)$ Werte
+        \begin{equation*}
+          I_z=m_I\cdot \hslash \quad \text{mit}\quad -I\le m_I \le +I
+        \end{equation*}
+        annehmen. Das magnetische Kernmoment ergibt sich damit zu
+        \begin{equation*}
+          \vec{\mu}_I=\gamma_\mathrm{K}\cdot \vec{I}.
+        \end{equation*}
+        Das magnetische Kernmoment befindet sich im vom Elektron durch Bahnbewegung und Spinmoment erzeugten Magnetfeld $B_j$ und hat hierdurch die Energie
+        \begin{equation*}
+          E_{I,j}=-|\mu_I|\cdot B_j \cdot \cos \left( \sphericalangle \left( \vec{j}, \vec{I}\right) \right).
+        \end{equation*}
+        Mit dem Gesamtdrehimpuls des Atoms
+        \begin{equation*}
+          \vec{F} = \vec{j}+\vec{I}
+        \end{equation*}
+        spaltet sich damit jedes Energieniveau der Feinstruktur in der \textit{Hyperfeinstruktur} gemä\ss
+        \begin{equation}
+          E_{HFS}=E{n,l,j} + \frac{A}{2}\left[ F(F+1) - j(j+1) - I(I+1) \right],
+        \end{equation}
+        mit der Hyperfeinkonstante
+        \begin{equation*}
+          A=\frac{g_I \cdot \mu_\mathrm{K}\cdot B_j}{\sqrt{j(j+1)}}.
+        \end{equation*}
+        Die vollständige Herleitung ist in \cite{dem:exp3-hyperfeinstruktur} zu finden.
+
+
+      \subsection{Termschema von Cäsium}
+      \label{subsec:termschema-caesium}
+
+
+
+
+    \section{Spektrallinienverbreiterung}
+    \label{sec:linienverbreiterung}
+
+      Die im vorherigen Abschnitt bestimmten Spektrallinien werden experimentell nur in verbreiterter Form gemessen. Dieser Linienverbreiterung liegen die natürliche Linienbreite, die Dopplerverbreiterung und die Druckverbreiterung zu Grunde.
+
+      \subsection{Natürliche Linienbreite}
+      \label{subsec:natuerliche-linienbreite}
+
+        Aufgrund der Unschärferelation kann kein physikalischen System gleichzeitig eine scharf definierte Energie und sich verändern. Da ein Übergang eine Veränderung darstellt kann dessen Energie also nicht scharf definiert sein. Somit liegt eine Linienverbreiterung vor.
+
+
+      \subsection{Dopplerverbreiterung}
+      \label{subsec:dopplerverbreiterung}
+
+        Da sich die Atome in der Gaskammer bewegen kommt es in Abhängigkeit von der Bewegung parallel zur Strahlrichtung nach dem \textsc{Doppler} Effekt zu einer Rot-, bzw. einer Blauverschiebung. Diese Linienverbreiterung wird Dopplerverbreiterung genannt.
+
+
+      \subsection{Druckverbreiterung}
+      \label{subsec:druckverbreiterung}
+
+        Je nach Gasdruck in der Gaskammer kommt es zu mehr oder weniger Stößen zwischen den Cäsium-Atomen. Die Wechselwirkung zwischen den Atomen beeinflusst das Termschema und verbreitert damit die Linien. Die Linienverbreiterung ist proportional zum Druck, weshalb idealerweise der Gasdruck in der Gaskammer sehr niedrig ist.
+
+
+
+
+
+
 
 
 
