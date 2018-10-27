@@ -3,20 +3,32 @@
 \begin{document}
   \chapter{Physikalische Grundlagen}
 
-    \section{Zeemann Effekt}
-    \label{sec:zeemann}
+    \section{Zeeman Effekt}
+    \label{sec:zeeman}
+
+      Der \textsc{Zeeman} Effekt beschreibt die beobachtete Energieaufspaltung der entarteten $E_{n,l,m}$-Zustände der Elektronen in der Atomschale in $m$ Subniveaus in einem externen Magnetfeld $\vec{B}$, wobei $n,l,m$ die bekannten Quantenzahlen sind. Nach dem semiklassischen Modell bewegen sich die Elektronen auf einer Kreisbahn um den Atomkern. Hierdurch wird ein Kreisstrom und damit ein magnetisches Moment
+      \begin{equation*}
+        \vec{p}_m=-\frac{e}{2m_e}\cdot \vec{l},
+      \end{equation*}
+      mit dem Bahndrehimpuls des Elektrons $\vec{l}$, der Elementarladung $e$ und der Elektronenmasse $m_e$, erzeugt, welches mit dem Feld $\vec{B}$ wechselwirkt. Die magnetische Quantenzahl $m$ kann die Werte
+      \begin{equation*}
+        -l \le m \le +l
+      \end{equation*}
+      annehmen. Damit spalten die Energieniveaus $E_{n,l,m}$ gemä\ss
+      \begin{equation}
+        E_{n,l,m}=E_\mathrm{Coul}(n,l)+\underbrace{\frac{e\hslash}{2m_e}}_{=\mu_\mathrm{Bohr}}\cdot mB
+      \end{equation}
+      in $(2l+1)$ Komponenten auf. $\mu_\mathrm{Bohr}$ wird als \textsc{Bohr}'sches Magneton bezeichnet. Die \textit{\textsc{Zeeman}-Aufspaltung} der Spektrallinien ist unabhängig von $n,l$ und damit äquidistant
+      \begin{equation}
+        \Delta E=\mu_\mathrm{Bohr}\cdot B.
+      \end{equation}
+      Ausführlich inklusive der Erklärung der erlaubten Übergänge wird der \textsc{Zeeman} Effekt in \cite{dem:exp3-normaler-zeeman} beschrieben, obige Beschreibung enthält Auszüge.
 
 
     \section{Spin-Bahn-Kopplung und Feinstruktur}
     \label{sec:feinstruktur}
 
-      Im semiklassischen Modell bewegen sich die Elektronen auf diskreten Kreisbahnen mit Radius $r$ um den Atomkern. Als Ladungsträger mit Ladung $q_e=-e$ stellt das rotierende Elektron einen Kreisstrom dar. Dieser erzeugt ein magnetisches Dipolmoment
-      \begin{equation*}
-        \vec{\mu}_l=-\underbrace{\frac{e\hslash}{2m_e}}_{=\mu_\mathrm{Bohr}}\frac{\vec{l}}{\hslash}
-      \end{equation*}
-      mit dem \textsc{Bohr}'schen Magneton, welches sich neben der Elektronenladung aus der Elektronenmasse $m_e$ und dem reduzierten \textsc{Planck}'schen Wirkungsquantum zusammensetzt. Weiter ist $\vec{l}$ der Bahndrehimpuls des Elektrons.
-
-      Aus dem quantenmechanischen Modell ergibt sich außerdem das magnetische Moment
+      Zusätzlich zu dem aus der Bahnbewegung des Elektrons resultierenden magnetischen Moment ergibt sich aus dem quantenmechanischen Modell das magnetische Moment
       \begin{equation*}
         \vec{\mu}_s=-2\mu_\mathrm{Bohr}\frac{\vec{s}}{\hslash},
       \end{equation*}
@@ -55,16 +67,47 @@
       \begin{equation*}
         a=\frac{\mu_0 Z e^2\hslash ^2}{8\pi m_e^2r^3}.
       \end{equation*}
-      Die Aufspaltung der Spektrallinien gemäß
+      Die Aufspaltung der Spektrallinien gemä\ss
       \begin{equation}
         E_{n,l,j}=E_n + \Delta E_{l,j}
       \end{equation}
-      ist die sogenannte Feinstrukturaufspaltung.
+      ist die sogenannte \textit{Feinstrukturaufspaltung}.
+
+      Die vorangegangenen Ausführungen sind eine Kurzfassung von \cite{dem:exp3-feinstruktur}.
 
 
     \section{Hyperfeinstruktur}
     \label{sec:hyperfeinstruktur}
 
+      Analog zum Spin des Elektrons wird auch dem räumlich ausgedehnten Atomkern ein Spin zugeordnet, der sogenannte Kernspin $\vec{I}$. Mit der Kernspinquantenzahl $I$ wird die Quantelung des Kernspins gemä\ss
+      \begin{equation*}
+        |\vec{I}|=\sqrt{I(I+1)}\hslash.
+      \end{equation*}
+      Dabei kann die Projektion auf die $z$-Richtung die $(2I+1)$ Werte
+      \begin{equation*}
+        I_z=m_I\cdot \hslash \quad \text{mit}\quad -I\le m_I \le +I
+      \end{equation*}
+      annehmen. Das magnetische Kernmoment ergibt sich damit zu
+      \begin{equation*}
+        \vec{\mu}_I=\gamma_\mathrm{K}\cdot \vec{I}.
+      \end{equation*}
+      Das magnetische Kernmoment befindet sich im vom Elektron durch Bahnbewegung und Spinmoment erzeugten Magnetfeld $B_j$ und hat hierdurch die Energie
+      \begin{equation*}
+        E_{I,j}=-|\mu_I|\cdot B_j \cdot \cos \left( \sphericalangle \left( \vec{j}, \vec{I}\right) \right).
+      \end{equation*}
+      Mit dem Gesamtdrehimpuls des Atoms
+      \begin{equation*}
+        \vec{F} = \vec{j}+\vec{I}
+      \end{equation*}
+      spaltet sich damit jedes Energieniveau der Feinstruktur in der \textit{Hyperfeinstruktur} gemä\ss
+      \begin{equation}
+        E_{HFS}=E{n,l,j} + \frac{A}{2}\left[ F(F+1) - j(j+1) - I(I+1) \right],
+      \end{equation}
+      mit der Hyperfeinkonstante
+      \begin{equation*}
+        A=\frac{g_I \cdot \mu_\mathrm{K}\cdot B_j}{\sqrt{j(j+1)}}.
+      \end{equation*}
+      Die vollständige Herleitung ist in \cite{dem:exp3-hyperfeinstruktur} zu finden.
 
 
 

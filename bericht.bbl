@@ -16,6 +16,87 @@
   {}
 \endgroup
 
+\entry{dem:exp3-normaler-zeeman}{inbook}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Demtröder}{D.}%
+     {Wolfgang}{W.}%
+     {}{}%
+     {}{}}%
+  }
+  \name{editor}{1}{}{%
+    {{}%
+     {Demtröder}{D.}%
+     {Wolfgang}{W.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Springer Spektrum}%
+  }
+  \strng{namehash}{DW1}
+  \strng{fullhash}{DW1}
+  \field{sortinit}{D}
+  \field{chapter}{5}
+  \field{pages}{149ff.}
+  \field{title}{Experimentalphysik 3: Atome, Moleküle und Festkörper}
+  \field{year}{2015}
+\endentry
+
+\entry{dem:exp3-feinstruktur}{inbook}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Demtröder}{D.}%
+     {Wolfgang}{W.}%
+     {}{}%
+     {}{}}%
+  }
+  \name{editor}{1}{}{%
+    {{}%
+     {Demtröder}{D.}%
+     {Wolfgang}{W.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Springer Spektrum}%
+  }
+  \strng{namehash}{DW1}
+  \strng{fullhash}{DW1}
+  \field{sortinit}{D}
+  \field{chapter}{5}
+  \field{pages}{158f.}
+  \field{title}{Experimentalphysik 3: Atome, Moleküle und Festkörper}
+  \field{year}{2015}
+\endentry
+
+\entry{dem:exp3-hyperfeinstruktur}{inbook}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Demtröder}{D.}%
+     {Wolfgang}{W.}%
+     {}{}%
+     {}{}}%
+  }
+  \name{editor}{1}{}{%
+    {{}%
+     {Demtröder}{D.}%
+     {Wolfgang}{W.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Springer Spektrum}%
+  }
+  \strng{namehash}{DW1}
+  \strng{fullhash}{DW1}
+  \field{sortinit}{D}
+  \field{chapter}{5}
+  \field{pages}{163f.}
+  \field{title}{Experimentalphysik 3: Atome, Moleküle und Festkörper}
+  \field{year}{2015}
+\endentry
+
 \lossort
 \endlossort
 
