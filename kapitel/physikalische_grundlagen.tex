@@ -120,8 +120,19 @@
       \subsection{Termschema von Cäsium}
       \label{subsec:termschema-caesium}
 
+        Die Elektronen der Atome können von ihrem Grundzustand in energiereichere Zustände angeregt werden. Da alle Zustände diskret sind ergibt sich ein Termschema wie in \cref{fig:termschema}. Allerdings gibt es Auswahlregeln für die möglichen Übergänge. Für Übergänge muss gelten: $\Delta m= \pm 1$ oder 0 und $\Delta l=\pm 1$. Ausführlichere Ausführungen sind in \cite{grif:quanten} zu finden.
+
         Für dieses Experiment interessiert die Anregung des Grundzustands $6^2\mathrm{S}_{1/2}$ in den $6^2\mathrm{P}_{3/2}$-Zustand.
-        Kernmoment $3 \frac{1}{2}$, Grundzustand spaltet in 2, angeregter Zustand in 4 Subniveaus auf
+        \begin{figure}[tb]
+          \begin{center}
+            \fbox
+            {
+            \includegraphics[angle=0, height=8 cm]{figures/fein-hyp.JPG}
+            }
+            \caption{Teil des Termschemas von Cäsium, mit Fein- und Hyperfeinstruktur (\cite{fein-hyp}). }
+          \end{center}
+          \label{fig:termschema}
+        \end{figure}
 
 
 
@@ -163,6 +174,61 @@
       Im Fall $f_0 = f_\mathrm{r}$ absorbieren die Atome mit Geschwindigkeitskomponente $v_z^\mathrm{r} = 0$. Hierbei überlagern sich die beiden \textsc{Bennet}-Löcher. Nun wird das Profil des \textit{Abfragestrahls} zwei mal gemessen: Einmal ohne \textit{Pumpstrahl} und einmal mit. Ohne erscheint das dopplerverbreiterte Profil. Bei eingeschaltetem \textit{Pumpstrahl} wird durch dessen hohe Intensität das untere Energieniveau entvölkert und das obere gesättigt. Als Folge dessen weist das Profil des \textit{Abfragestrahls} nun Minima an Stelle der Absorptionslinien auf, sogenannte \textit{\textsc{Lamb}-Dips}. Durch Differenzbildung der beiden Profile entsteht so ein dopplerfreies Absorptionsspektrum der Atome.
 
       Dieser Aufbau zur dopplerfreien Spektroskopie wird auch \textit{Sättigungsspektroskopie} genannt.
+
+
+    \section{Cross-over Resonanz}
+
+      Wenn zwei Absorptionskurven so nahe aneinander liegen, dass sich die Dopplerprofile überlagern tritt die sogenannte Cross-over Resonanz auf. Wenn für Pumpfrequenz $\nu$ und die Resonanzfrequenzen $\nu_1$, $\nu_2$ gilt,
+      \begin{align*}
+        \nu_2 - \nu = \nu - \nu_1 = \pm \frac{v^*}{c} \nu_0
+      \end{align*}
+      wechselwirken die Laserstrahlen mit Atomen mit der Geschwindigkeit $v^*$. Dadurch entsteht ein drittes Minimum im Absorptionsspektrum zwischen den beiden anderen.
+
+    \section{Diodenlaser}
+
+      Es folgt eine Kurzfassung von \cite{quant} zur Funktion von Diodenlasern.
+
+      Diodenlaser sind aus Halbleitern aufgebaut. Der Laserlicht entsteht wenn sich die Elektronen im Leitungsband mit den Löchern im Valenzband rekombinieren.
+      \begin{figure}[tb]
+        \begin{center}
+          \fbox
+          {
+          \includegraphics[angle=0, height=6 cm]{figures/diodenlaser.JPG}
+          }
+          \caption{Schematischer Aufbau eines typischen Diodenlasers (\cite{quant}). }
+          \label{fig:diodenlaser}
+        \end{center}
+      \end{figure}
+
+      Wie in \cref{fig:diodenlaser} zu sehen ist, besteht der Hauptteil eines Diodenlasers aus einem $p-n$-Übergang, der durch Dotierung erzeugt wird. Das anlegen einer Spannung führt zu einer Besetzungsinversion mit Löchern im Valenzband und Elektronen im Leitungsband. Dies ist der Pumpprozess des Lasers. Die Rekombination der Löcher und Elektronen kann spontan oder stimuliert erfolgen. Das dabei emittierte Licht ist nur Kohärent falls die stimulierte Emission überwiegt.
+      Aufgrund des hohen Brechungsindexes der Halbleiterkristalle fungieren sie direkt als Resonatoren. Die Seite auf der kein Licht austreten soll wird verspiegelt. Die Endfläche des Kristalls hatte eine Reflektivität von ca. $\SI{30}{\percent}$. Aufgrund der hohen Verstärkung reicht dies aus. Wie für Resonatoren üblich gilt für die sich ausbildenden stehenden Wellen:
+      \begin{align*}
+        L=m*\frac{\lambda}{2n}
+      \end{align*}
+      Hierbei ist $m$ eine natürliche Zahl, $n$ der Brechungsindex, $\lambda$ die Wellenlänge und $L$ die Länge des Resonators/ Kristalls.\\
+      Vorteile dieses Lasers sind das einfache Pumpen, seine relativ starke Leistung sowie die Durchstimmbarkeit der Frequenzen in gewissen Grenzen. Außerdem ist er klein, billig und hält langen Gebrauch gut aus.
+
+
+    \section{Konfokales Fabry-Perot-Etalon}
+
+      Ein konfokales \textsc{Fabry-Perot}-Etalon ist ein Interferometer aufgebaut aus zwei sphärischen Spiegeln. Die sphärischen Spiegel reduzieren die Empfindlichkeit des Strahls auf Justierungen am Spiegel und reduzieren Beugungsverluste. Aufbau und Strahlenverlauf sind in \cref{fig:fabry-perot} zu sehen.
+      \begin{figure}
+        \begin{center}
+        \fbox
+        {
+          \includegraphics[angle=0, height=6 cm]{figures/fabryperot}
+        }
+        \caption{Strahlengang in einem konfokalen \textsc{Fabry-Perot}-Etalon (\cite{fabry-perot}).}
+        \label{fig:fabry-perot}
+        \end{center}
+      \end{figure}
+      Nach vier Reflektionen kommt der Strahl wieder am Ausgangspunkt an. Wenn die Strahlen 0, 4, 8, 12, ... mal reflektiert wurden und dann an der gleichen Stelle transmittieren kommt es zu Interferenz. Der Krümmungsradius und der Abstand zwischen den Spiegeln ist r. Wenn für die Abstände zwischen den Reflektionspunkten und der optischen Achse gilt $\rho_1$ und $\rho_2 \ll r$ und der Eintrittswinkel gilt $\theta \ll 1$, dann ist die Bedingung für konstruktive Interferenz durch
+      \begin{align*}
+        4r+\frac{\rho_1^2*\rho_2^2}{r^3}\approx4r=m\lambda.
+      \end{align*}
+      gegeben.
+
+      Obige Beschreibungen sind an die detaillierteren Ausführungen in \cite{dem:laser} angelehnt.
 
 
 

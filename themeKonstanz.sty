@@ -31,7 +31,8 @@
 % Codierung
 %\usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
-\usepackage[T1]{fontenc}
+%\usepackage[T1]{fontenc}
+\renewcommand{\familydefault}{\sfdefault}
 
 % Bibliographie
 \usepackage[backend=bibtex]{biblatex}
@@ -99,7 +100,9 @@
 \usepackage{tabu}
 
 % Referenzierung
+\usepackage{xr-hyper}
 \usepackage{hyperref}
+\usepackage{cleveref}
 
 % LaTeX Fixes - ab Version 2015 nicht mehr notwendig
 \usepackage{fixltx2e}
