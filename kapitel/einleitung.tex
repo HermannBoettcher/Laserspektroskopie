@@ -65,7 +65,7 @@
     \section{Termschema von Cäsium}
     \label{sec:termschema-caesium}
 
-      Im Versuch wird das Nuklid $\mathrm{^{133}Cs}$ verwendet. Dessen relevantes Termschema mit Feinstrukturaufspaltung und Hyperfeinstrukturaufspaltung ist in \cref{fig:feinstruktur-hyperfeinstruktur} abgebildet. Die Kernspinquantenzahl ist $I=\frac{7}{2}$. Weiter sind die erlaubten Übergänge als direkte Folge von anregender Strahlung eingezeichnet (keine Relaxationen!). Für diese ist zu beachten, dass anregende Photonen einen Spin von $1$ tragen. Es gelten die Übergangsregeln
+      Im Versuch wird das Nuklid $\mathrm{^{133}Cs}$ verwendet. Für die Zustände wird die Nomenklatur $n^ l_j$ ??? verwendet. Der relevante Teil des Termschemas von Cäsium für den Versuch, d.h. der Grundzustand $\mathrm{6^2 S_{1/2}}$ und der angeregte Zustand $\mathrm{6^2P_{3/2}}$ mit Feinstrukturaufspaltung und Hyperfeinstrukturaufspaltung sind in \cref{fig:feinstruktur-hyperfeinstruktur} abgebildet. Die Kernspinquantenzahl ist $I=\frac{7}{2}$. Weiter sind die erlaubten angeregten optischen Übergänge rot eingezeichnet. Für diese ist zu beachten, dass anregende Photonen einen Spin von $1$ tragen. Bei Verwendung von linear polarisiertem Licht gelten die Übergangsregeln
       \begin{equation*}
         \Delta l = 1\quad \text{und}\quad \Delta F = -1,0,+1.
       \end{equation*}
@@ -112,9 +112,45 @@
     \section{Diodenlaser}
     \label{sec:diodenlaser}
 
+      Es folgt eine Kurzfassung von ??? zur Funktion von Diodenlasern.
 
-      \subsection{Linienbreite}
-      \label{subsec:linienbreite}
+      Diodenlaser sind aus Halbleitern aufgebaut. Bei der Rekombination von Elektronen im Leitungsband mit den Löchern im Valenzband wird das Laserlicht emittiert. Der Hauptteil eines Diodenlasers besteht aus einem $p-n$-Übergang, welcher durch Dotierung erzeugt wird. Die Besetzungsinversion mit Löchern im Valenzband und Elektronen im Leitungsband wird durch das Anlegen einer Spannung erreicht. Dieser Prozess ist der Pumpprozess des Lasers. Die Rekombination der Löcher und Elektronen kann spontan oder stimuliert erfolgen. Das dabei emittierte Licht ist nur kohärent, falls die stimulierte Emission überwiegt. Aufgrund des hohen Brechungsindexes $n$ der Halbleiterkristalle beträgt die Reflektivität der Grenzfläche zu Vakuum in etwa $\SI{30}{\percent}$. Damit können die Kristalle selbst, ohne weitere Behandlung, als Resonatoren fungieren. Diejenige Seite, auf der kein Licht austreten soll, wird zusätzlich verspiegelt. Für die Ausbildung von stehenden Wellen im Resonator gilt der Zusammenhang
+      \begin{equation*}
+        \lambda = \frac{2nL}{m}.
+      \end{equation*}
+      Hierbei ist $\lambda$ die Wellenlänge des Lichts, $L$ die Länge des Resonators (Halbleiterkristalls) und $m$ eine natürliche Zahl.
+
+      Einer der Vorteile eines Diodenlasers ist dessen Durchstimmbarkeit bezüglich der Frequenzen. In Abhängigkeit der Betriebstemperatur $T$ und der Stromstärke $I$ ??? ändert sich die Frequenz der Laserstrahlung. Die Temperatur beeinflusst die Ausdehnung des Kristalls und damit die Länge des Resonators. Unter Voraussetzung einer konstanten Temperatur ändert sich mit der Stromstärke die Ladungsträgerdichte im Halbleiter. Damit ändert sich auch der Brechungsindex des Kristalls und somit die optische Länge des Resonators.
+      Die Durchstimmbarkeit ist für diesen Versuch von Bedeutung, um die Resonanzfrequenz von Cäsium zu treffen.
+
+      Die Laserschwelle des in diesem Versuch verwendeten Lasers liegt bei.... ????
+
+      Weiter weist ein Diodenlaser, wie alle Laser, eine schmale Linienbreite auf, welche nötig ist um die Energieaufspaltung der Hyperfeinstruktur auflösen zu können. Das Spektrum des verwendeten Lasers ist in ??? abgebildet. Dieses ist jedoch noch immer zu breit für die gewünschte Auflösung der Hyperfeinstruktur. Die Linienbreite des Lasers erscheint verbreitert durch die \textit{natürliche Linienbreite}, \textit{\textsc{Doppler}verbreiterung} und \textit{Druckverbreiterung}. Dominant ist hierbei die \textit{\textsc{Doppler}verbreiterung}, wie in folgenden Abschnitten erläutert wird. Deshalb folgt auch die Notwendigkeit der \textit{\textsc{doppler}freien Spektroskopie} (vgl. \ref{sec:dopplerfreie-spektroskopie}).
+
+
+      \subsection{Druckverbreiterung}
+      \label{subsec:druckverbreiterung}
+
+        Je nach Gasdruck in der Gaskammer kommt es zu mehr oder weniger Stößen zwischen den
+        Cäsium-Atomen. Die Wechselwirkung zwischen den Atomen beeinflusst das Termschema und
+        verbreitert damit die Spektrallinien. Die Linienverbreiterung ist proportional zum Druck. Somit kann und wird der Effekt der \textit{Druckverbreiterung} durch einen kleinen Druck in der Gaskammer minimiert.
+
+
+      \subsection{Natürliche Linienbreite}
+      \label{subsec:natueliche-linienbreite}
+
+        Angeregte Zustände haben nur eine endliche Lebensdauer bevor das System wieder in den Grundzustand relaxiert. Nach der \textit{\textsc{Heisenberg}'schen Unschärferelation} können Zeit und Energie aber nicht gleichzeitig scharf bestimmt werden. Somit gehören zu Zuständen mit begrenzter Lebensdauer unscharfe Energieniveaus. Dies sorgt für eine Verbreiterung der Spektrallinien. Die Unschärfe aufgrund der sogenannten \textit{natürlichen Linienbreite} ist allerdings für die optischen Cäsium Übergänge, welche in diesem Versuch von Interesse sind, hinreichend klein um die Hyperfeinstruktur auflösen zu können.
+
+
+      \subsection{Dopplerverbreiterung}
+      \label{subsec:dopplerverbreiterung}
+
+        Gemä\ss dem relativistischen \textsc{Doppler}-Effekt ändert sich die Frequenz eines einfallenden Photons im Ruhesystem eines (Cäsium-) Atoms, falls das Atom eine Geschwindigkeitskomponente ungleich Null parallel zur Bahn des Photons aufweist. Im Falle von entgegengesetzten Bewegungen von Atom und Photon kommt es zur Blauverschiebung (die vom Atom observierte Frequenz wird größer), im Falle von gleichgerichteten Bewegungen zur Rotverschiebung (die vom Atom observierte Frequenz wird kleiner). Mit dem \textsc{Doppler}-Effekt als Ursache wird diese Linienverbreiterung \textit{\textsc{Doppler}verbreiterung} genannt.
+
+
+
+
+
 
 
     \section{Transmissionsspektroskopie}
