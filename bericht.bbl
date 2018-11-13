@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex version 2.6 $
+% $ biblatex bbl format version 2.9 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -16,7 +16,5 @@
   {}
 \endgroup
 
-\lossort
-\endlossort
-
+\datalist[entry]{nty/global//global/global}\enddatalist
 \endinput

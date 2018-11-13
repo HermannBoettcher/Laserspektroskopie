@@ -122,10 +122,58 @@
 
       Einer der Vorteile eines Diodenlasers ist dessen Durchstimmbarkeit bezüglich der Frequenzen. In Abhängigkeit der Betriebstemperatur $T$ und der Stromstärke $I$ ??? ändert sich die Frequenz der Laserstrahlung. Die Temperatur beeinflusst die Ausdehnung des Kristalls und damit die Länge des Resonators. Unter Voraussetzung einer konstanten Temperatur ändert sich mit der Stromstärke die Ladungsträgerdichte im Halbleiter. Damit ändert sich auch der Brechungsindex des Kristalls und somit die optische Länge des Resonators.
       Die Durchstimmbarkeit ist für diesen Versuch von Bedeutung, um die Resonanzfrequenz von Cäsium zu treffen.
-
-      Die Laserschwelle des in diesem Versuch verwendeten Lasers liegt bei.... ????
+      \medskip
 
       Weiter weist ein Diodenlaser, wie alle Laser, eine schmale Linienbreite auf, welche nötig ist um die Energieaufspaltung der Hyperfeinstruktur auflösen zu können. Das Spektrum des verwendeten Lasers ist in ??? abgebildet. Dieses ist jedoch noch immer zu breit für die gewünschte Auflösung der Hyperfeinstruktur. Die Linienbreite des Lasers erscheint verbreitert durch die \textit{natürliche Linienbreite}, \textit{\textsc{Doppler}verbreiterung} und \textit{Druckverbreiterung}. Dominant ist hierbei die \textit{\textsc{Doppler}verbreiterung}, wie in folgenden Abschnitten erläutert wird. Deshalb folgt auch die Notwendigkeit der \textit{\textsc{doppler}freien Spektroskopie} (vgl. \ref{sec:dopplerfreie-spektroskopie}).
+      \medskip
+
+      Der in diesem Versuch verwendete Diodenlaser weist den in \cref{fig:laserschwelle} abgebildeten Zusammenhang zwischen Eingansstrom und Ausgangsleistung auf. Die lineare Regression für Messpunkte mit Eingangsstrom $I\ge 31$ liefert die Gerade
+      \begin{equation*}
+        P(I)=-\SI{5,21}{\milli\watt} + \SI{0,156}{\volt}\cdot I
+      \end{equation*}
+      Und damit die Laserschwelle
+      \begin{equation*}
+        I_\mathrm{Schwelle}=\SI{33,4}{\ampere}.
+      \end{equation*}
+      Gemessen wurde die Ausgangsleistung in Abhängigkeit des \textit{Coarse} der Spannungsquelle. Mithilfe von \textit{Coarse}-Stromstärke-Kennlinie des Netzteils des Diodenlasers (\cref{sec:netzteil-kennlinie}) wird die Eingangsstromstärke des Lasers ermittelt. Diese Daten liegen nicht in digitaler Form vor und mussten deshalb vom Graphen abgelesen werden. Hierbei ist ein nicht zu vernachlässigender Fehler aufgetreten, der, zusammen mit dem unbekannten Fehler der des Graphen selber, auf
+      \begin{equation*}
+        \delta I = \pm \SI{2}{\milli\ampere}
+      \end{equation*}
+      geschätzt wird. Zudem liegt der Fehler des Powermeters??? bei
+      \begin{equation*}
+        \delta P = 0,003 \cdot P.
+      \end{equation*}
+      Beide Fehler sind mithilfe der Fehlerbalken in \cref{fig:laserschwelle} angegeben. Bei der Berechnung der Laserschwelle wurde der Fehler des Powermeters mit der $\frac{1}{Fehler}$-Gewichtung berücksichtigt.
+
+      \begin{figure}[tb]
+        \begin{tikzpicture}
+            \def\Imin{0}
+    				\def\Imax{100}
+    				\def\Pmin{0}
+    				\def\Pmax{10}
+            %
+            \begin{axis}[
+              /tikz/line join=bevel,
+              width=0.8*\textwidth,
+              height=0.5*\textwidth,
+              grid,
+              legend style={at={(0,1)}, legend columns=1, anchor=north west},
+              every axis plot,
+    					xmin = \Imin, xmax = \Imax,
+    					ymin = \Pmin, ymax = \Pmax,
+    					xlabel = {Eingangsstrom $I$ in $\si{\milli\ampere}$},
+    					ylabel = {Laserleistung $P$ in $\si{\milli\watt}$},
+              ]
+    					% Add plots
+    					\addplot[only marks, color=blue, line width = 1pt] plot [error bars/.cd, y dir = both, y explicit, x dir = both, x explicit] table [x=current,y=power, x error=current-error, y error=power-error]{data/laser_threshold.txt};
+    					\addlegendentry{Messpunkte}
+    					\addplot[draw=red, line width = 1pt][domain=30:100]{-5.21048967 + 0.15615788 * x};
+    					\addlegendentry{Lineare Regression}
+            \end{axis}
+        \end{tikzpicture}
+        \caption{Ausgangsleistung $P$ als Funktion des Eingangsstroms $I$ der verwendeten Laserdiode bei einer Temperatur von $T=\SI{21,4(20)}{\celsius}$.}
+        \label{fig:laserschwelle}
+      \end{figure}
 
 
       \subsection{Druckverbreiterung}

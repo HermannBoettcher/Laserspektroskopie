@@ -10,17 +10,22 @@
 
 % meine Paketes
 
+%TikZ
+\usepackage{tikz}
+\usepackage{pgfplots}
+
 \usepackage{subfiles}
+\usepackage[toc,page]{appendix}
+\usepackage{here}
+
+
 % fonts und quatsch für Mathematik
 \usepackage{siunitx}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{cmbright}
 \usepackage{fontawesome}
 \usepackage[version=4]{mhchem}
-
-%TikZ
-\usepackage{tikz}
-
 % Farben
 \usepackage{xcolor}
 
@@ -33,6 +38,8 @@
 % Codierung
 %\usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
+\renewcommand{\appendixpagename}{\appendixname}
+\renewcommand{\appendixtocname}{\appendixname} 
 %\usepackage[T1]{fontenc}
 
 % Bibliographie

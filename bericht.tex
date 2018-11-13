@@ -73,7 +73,7 @@
 
 %\usepackage{themeKonstanzXelatexAddOn} % XeLaTeX mit Schriftart Arial, VOR dem Standardpaket importieren
 \usepackage{themeKonstanz} % Muss immer verwendet werden (Standardpaket)
-\usepackage{themeKonstanzStyleAddOn} % Style Add-On für andere Überschriften, NACH dem Standardpaket importieren
+%\usepackage{themeKonstanzStyleAddOn} % Style Add-On für andere Überschriften, NACH dem Standardpaket importieren
 
 
 
@@ -250,7 +250,6 @@
 \begin{document}
 
 \pagenumbering{Roman}
-awesome change
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -438,7 +437,7 @@ awesome change
 
 
 
-\rmfamily % Auskommentieren für eine Schrift mit serifen / Kommentieren für eine serifenlose Schrift
+%\rmfamily % Auskommentieren für eine Schrift mit serifen / Kommentieren für eine serifenlose Schrift
 \normalsize
 
 \newpage
@@ -449,6 +448,8 @@ awesome change
 
 \printbibliography
 \addcontentsline{toc}{chapter}{Bibliographie}
+
+\subfile{kapitel/anhang.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Ende vom Dokument                                     %
