@@ -152,7 +152,7 @@
         \begin{equation*}
           T=\SI{21,4(20)}{\celsius}
         \end{equation*}
-        durchgef\"uhrt. W\"ahrend die Anzeige des Regelungsinstruments den Wert laut technischer Daten pr\"aziser angibt, ist das Ger\"at seit Jahren nicht geeicht geworden. Deshalb dient die Anzeige nur als Anhaltspunkt, bzw. f\"ur Temperaturdifferenzen, jedoch nicht f\"ur absolute Temperaturmessungen. Dmeentsprechen gro\ss{} ist der Fehler mit $\SI{2}{\celsius}$  gew\"ahlt.
+        durchgef\"uhrt. W\"ahrend die Anzeige des Regelungsinstruments den Wert laut technischer Daten pr\"aziser angibt, ist das Ger\"at seit Jahren nicht geeicht geworden. Deshalb dient die Anzeige nur als Anhaltspunkt, bzw. f\"ur Temperaturdifferenzen, jedoch nicht f\"ur absolute Temperaturmessungen. Dementsprechen gro\ss{} ist der Fehler mit $\SI{2}{\celsius}$  gew\"ahlt.
 
         \begin{figure}[tb]
           \begin{tikzpicture}
@@ -227,11 +227,19 @@
         \begin{equation*}
           4L = m \frac{c}{f}.
         \end{equation*}
-        Die Auflösung von unterschiedlichen Frequenzen $f_n$ und $f_m$, $n,m\in\mathbb{N}$ mit $n\ne m $, ist wegen
+        Die Aufl\"osung von unterschiedlichen Frequenzen $f_n$ und $f_m$, $n,m\in\mathbb{N}$ mit $n\ne m $, ist wegen
         \begin{equation*}
-          \Delta f= \f_n-f_m=c \frac{n-m}{4L}
+          \Delta f= f_n -f_m =c \frac{n-m}{4L}
         \end{equation*}
-        sehr gut.
+        sehr gut. Man nennt die kleinste Auflösbare Frequenzverschiebung
+        \begin{equation*}
+          \Delta f = f_n - f_{n+1} = \frac{c}{4L} = \SI{599,58(1199)}{\mega\hertz}
+        \end{equation*}
+        auch den \textit{freien Spektralbereich}, wobei im letzten Schritt die gemessene Länge des \textit{\textsc{Fabry-Perot}-Etalons}
+        \begin{equation*}
+          L=\SI{12,5(10)}{\centi\meter}
+        \end{equation*}
+        verwendet wurde. Der Fehler ergibt sich hierbei durch das unischere Messen mit einem einfachen Lineal. Die Spiegel sind in Gehäusen versenkt. Weiter erlaubt der Aufbau es nicht, das Lineal dirrekt anzulegen, es muss stattdessen ein paar Zentimeter oberhalb des Etalons in der Luft gehalten werden. Somit kommen das Peilen und die Unischerheit, an welcher Stelle genau im Gehäuse sich die Spiegel befinden, zusammen. Entsprechend wurde der Fehler mit $\SI{1}{\centi\meter}$ großzügig gewählt.
 
         \begin{figure}[ht]
           \begin{tikzpicture}
@@ -266,7 +274,7 @@
       \subsection{Linienbreite des verwendeten Diodenlasers}
       \label{subsec:linienbreite-laser}
 
-        
+        Der freie Spektralbereich des \textsc{Fabry-Perot}-Etalons ist nach
 
 
 
