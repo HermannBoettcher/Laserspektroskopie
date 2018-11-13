@@ -16,5 +16,37 @@
   {}
 \endgroup
 
-\datalist[entry]{nty/global//global/global}\enddatalist
+\datalist[entry]{nty/global//global/global}
+  \entry{dem:exp3-linienbreite}{inbook}{}
+    \name{author}{1}{}{%
+      {{hash=DW}{%
+         family={Demtröder},
+         familyi={D\bibinitperiod},
+         given={Wolfgang},
+         giveni={W\bibinitperiod},
+      }}%
+    }
+    \name{editor}{1}{}{%
+      {{hash=DW}{%
+         family={Demtröder},
+         familyi={D\bibinitperiod},
+         given={Wolfgang},
+         giveni={W\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer Spektrum}%
+    }
+    \strng{namehash}{DW1}
+    \strng{fullhash}{DW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{chapter}{7}
+    \field{pages}{226 ff.}
+    \field{title}{Experimentalphysik 3: Atome, Moleküle und Festkörper}
+    \field{year}{2015}
+  \endentry
+\enddatalist
 \endinput

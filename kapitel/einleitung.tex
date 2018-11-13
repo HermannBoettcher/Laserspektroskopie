@@ -124,87 +124,149 @@
       Die Durchstimmbarkeit ist f\"ur diesen Versuch von Bedeutung, um die Resonanzfrequenz von C\"asium zu treffen.
       \medskip
 
-      Weiter weist ein Diodenlaser, wie alle Laser, eine schmale Linienbreite auf, welche n\"otig ist um die Energieaufspaltung der Hyperfeinstruktur aufl\"osen zu k\"onnen. Das Spektrum des verwendeten Lasers ist in ??? abgebildet. Dieses ist jedoch noch immer zu breit f\"ur die gew\"unschte Aufl\"osung der Hyperfeinstruktur. Die Linienbreite des Lasers erscheint verbreitert durch die \textit{nat\"urliche Linienbreite}, \textit{\textsc{Doppler}verbreiterung} und \textit{Druckverbreiterung}. Dominant ist hierbei die \textit{\textsc{Doppler}verbreiterung}, wie in folgenden Abschnitten erl\"autert wird. Deshalb folgt auch die Notwendigkeit der \textit{\textsc{doppler}freien Spektroskopie} (vgl. \ref{sec:dopplerfreie-spektroskopie}).
-      \medskip
-
-      Der in diesem Versuch verwendete Diodenlaser weist den in \cref{fig:laserschwelle} abgebildeten Zusammenhang zwischen Eingansstrom und Ausgangsleistung auf. Die lineare Regression f\"ur Messpunkte mit Eingangsstrom $I\ge 31$ liefert die Gerade
-      \begin{equation}
-        P(I)=-\SI{5,21(6)}{\milli\watt} + \SI{0,156(1)}{\volt}\cdot I
-        \label{eq:laserschwellen-plot}
-      \end{equation}
-      Und damit die Laserschwelle
-      \begin{equation}
-        I_\mathrm{Schwelle}=\SI{33,37(56)}{\ampere}.
-        \label{eq:laserschwelle}
-      \end{equation}
-      Gemessen wurde die Ausgangsleistung in Abh\"angigkeit des \textit{Coarse} der Spannungsquelle. Mithilfe von \textit{Coarse}-Stromst\"arke-Kennlinie des Netzteils des Diodenlasers (\cref{sec:netzteil-kennlinie}) wird die Eingangsstromst\"arke des Lasers ermittelt. Diese Daten liegen nicht in digitaler Form vor und mussten deshalb vom Graphen abgelesen werden. Hierbei ist ein nicht zu vernachl\"assigender Fehler aufgetreten, der, zusammen mit dem unbekannten Fehler der des Graphen selber, auf
-      \begin{equation*}
-        \delta I = \pm \SI{2}{\milli\ampere}
-      \end{equation*}
-      gesch\"atzt wird. Zudem liegt der Fehler des Powermeters??? bei
-      \begin{equation*}
-        \delta P = 0,003 \cdot P.
-      \end{equation*}
-      Beide Fehler sind mithilfe der Fehlerbalken in \cref{fig:laserschwelle} angegeben. Bei der Berechnung der Laserschwelle wurde der Fehler des Powermeters mit einer $\frac{1}{Fehler}$-Gewichtung ber\"ucksichtigt. Die Messungen wurden bei der Diodenlasertemperatur
-      \begin{equation*}
-        T=\SI{21,4(20)}{\celsius}
-      \end{equation*}
-      durchgef\"uhrt. W\"ahrend die Anzeige des Regelungsinstruments den Wert laut technischer Daten pr\"aziser angibt, ist das Ger\"at seit Jahren nicht geeicht geworden. Deshalb dient die Anzeige nur als Anhaltspunkt, bzw. f\"ur Temperaturdifferenzen, jedoch nicht f\"ur absolute Temperaturmessungen. Dmeentsprechen gro\ss{} ist der Fehler mit $\SI{2}{\celsius}$  gew\"ahlt.
-
-      \begin{figure}[tb]
-        \begin{tikzpicture}
-            \def\Imin{0}
-    				\def\Imax{100}
-    				\def\Pmin{0}
-    				\def\Pmax{10}eq:laserschwelle
-            %
-            \begin{axis}[
-              /tikz/line join=bevel,
-              width=0.8*\textwidth,
-              height=0.5*\textwidth,
-              grid,
-              legend style={at={(0,1)}, legend columns=1, anchor=north west},
-              every axis plot,
-    					xmin = \Imin, xmax = \Imax,
-    					ymin = \Pmin, ymax = \Pmax,
-    					xlabel = {Eingangsstrom $I$ in $\si{\milli\ampere}$},
-    					ylabel = {Laserleistung $P$ in $\si{\milli\watt}$},
-              ]
-    					% Add plots
-    					\addplot[only marks, color=blue, line width = 1pt] plot [error bars/.cd, y dir = both, y explicit, x dir = both, x explicit] table [x=current,y=power, x error=current-error, y error=power-error]{data/laser_threshold.txt};
-    					\addlegendentry{Messpunkte}
-    					\addplot[draw=red, line width = 1pt][domain=30:100]{-5.21048967 + 0.15615788 * x};
-    					\addlegendentry{Lineare Regression}
-            \end{axis}
-        \end{tikzpicture}
-        \caption{Ausgangsleistung $P$ als Funktion des Eingangsstroms $I$ der verwendeten Laserdiode bei einer Temperatur von $T=\SI{21,4(20)}{\celsius}$. Eingezeichnet ist auch die lineare Regression \cref{eq:laserschwellen-plot} zur Bestimmung der Laserschwelle \cref{eq:laserschwelle}.}
-        \label{fig:laserschwelle}
-      \end{figure}
+      Weiter weist ein Diodenlaser, wie alle Laser, eine schmale Linienbreite auf. Dieser Vorteil, welcher für dieses Experiment von großer Bedeutung ist, wird in \cref{sec:linienbreite} vertieft.
 
 
-      \subsection{Druckverbreiterung}
-      \label{subsec:druckverbreiterung}
+      \subsection{Laserschwelle des verwendeten Diodenlasers}
+      \label{subsec:laserschwelle}
 
-        Je nach Gasdruck in der Gaskammer kommt es zu mehr oder weniger St\"o\ss{}en zwischen den
-        C\"asium-Atomen. Die Wechselwirkung zwischen den Atomen beeinflusst das Termschema und
-        verbreitert damit die Spektrallinien. Die Linienverbreiterung ist proportional zum Druck. Somit kann und wird der Effekt der \textit{Druckverbreiterung} durch einen kleinen Druck in der Gaskammer minimiert.
+        Der in diesem Versuch verwendete Diodenlaser weist den in \cref{fig:laserschwelle} abgebildeten Zusammenhang zwischen Eingansstrom und Ausgangsleistung auf. Die lineare Regression f\"ur Messpunkte mit Eingangsstrom $I\ge 31$ liefert die Gerade
+        \begin{equation}
+          P(I)=-\SI{5,21(6)}{\milli\watt} + \SI{0,156(1)}{\volt}\cdot I
+          \label{eq:laserschwellen-plot}
+        \end{equation}
+        Und damit die Laserschwelle
+        \begin{equation}
+          I_\mathrm{Schwelle}=\SI{33,37(56)}{\ampere}.
+          \label{eq:laserschwelle}
+        \end{equation}
+        Gemessen wurde die Ausgangsleistung in Abh\"angigkeit des \textit{Coarse} der Spannungsquelle. Mithilfe von \textit{Coarse}-Stromst\"arke-Kennlinie des Netzteils des Diodenlasers (\cref{sec:netzteil-kennlinie}) wird die Eingangsstromst\"arke des Lasers ermittelt. Diese Daten liegen nicht in digitaler Form vor und mussten deshalb vom Graphen abgelesen werden. Hierbei ist ein nicht zu vernachl\"assigender Fehler aufgetreten, der, zusammen mit dem unbekannten Fehler der des Graphen selber, auf
+        \begin{equation*}
+          \delta I = \pm \SI{2}{\milli\ampere}
+        \end{equation*}
+        gesch\"atzt wird. Zudem liegt der Fehler des Powermeters??? bei
+        \begin{equation*}
+          \delta P = 0,003 \cdot P.
+        \end{equation*}
+        Beide Fehler sind mithilfe der Fehlerbalken in \cref{fig:laserschwelle} angegeben. Bei der Berechnung der linearen Regression wurde der Fehler des Powermeters mit einer $\frac{1}{\mathrm{Fehler}}$-Gewichtung ber\"ucksichtigt. Die Messungen wurden bei der Diodenlasertemperatur
+        \begin{equation*}
+          T=\SI{21,4(20)}{\celsius}
+        \end{equation*}
+        durchgef\"uhrt. W\"ahrend die Anzeige des Regelungsinstruments den Wert laut technischer Daten pr\"aziser angibt, ist das Ger\"at seit Jahren nicht geeicht geworden. Deshalb dient die Anzeige nur als Anhaltspunkt, bzw. f\"ur Temperaturdifferenzen, jedoch nicht f\"ur absolute Temperaturmessungen. Dmeentsprechen gro\ss{} ist der Fehler mit $\SI{2}{\celsius}$  gew\"ahlt.
 
+        \begin{figure}[tb]
+          \begin{tikzpicture}
+              \def\Imin{0}
+      				\def\Imax{100}
+      				\def\Pmin{0}
+      				\def\Pmax{10}eq:laserschwelle
+              %
+              \begin{axis}[
+                /tikz/line join=bevel,
+                width=0.8*\textwidth,
+                height=0.5*\textwidth,
+                grid,
+                legend style={at={(0,1)}, legend columns=1, anchor=north west},
+                every axis plot,
+      					xmin = \Imin, xmax = \Imax,
+      					ymin = \Pmin, ymax = \Pmax,
+      					xlabel = {Eingangsstrom $I$ in $\si{\milli\ampere}$},
+      					ylabel = {Laserleistung $P$ in $\si{\milli\watt}$},
+                ]
+      					% Add plots
+      					\addplot[only marks, color=blue, line width = 1pt] plot [error bars/.cd, y dir = both, y explicit, x dir = both, x explicit] table [x=current,y=power, x error=current-error, y error=power-error]{data/laser_threshold.txt};
+      					\addlegendentry{Messpunkte}
+      					\addplot[draw=red, line width = 1pt][domain=30:100]{-5.21048967 + 0.15615788 * x};
+      					\addlegendentry{Lineare Regression}
+              \end{axis}
+          \end{tikzpicture}
+          \caption{Ausgangsleistung $P$ als Funktion des Eingangsstroms $I$ der verwendeten Laserdiode bei einer Temperatur von $T=\SI{21,4(20)}{\celsius}$. Eingezeichnet ist auch die lineare Regression \cref{eq:laserschwellen-plot} zur Bestimmung der Laserschwelle \cref{eq:laserschwelle}.}
+          \label{fig:laserschwelle}
+        \end{figure}
+
+
+    \section{Linienbreite}
+    \label{sec:linienbreite}
+
+      Als \textit{Linienbreite} bezeichnet man das zunächst unerwartete Frequenzintervall, welches beispielsweise von der Strahlung eines einzelnen optischen Übergangs abgedeckt wird. Anstelle einer diskreten Frequenz wird eine glockenförmige Verteilung gemessen. Die Verbreiterung setzt sich aus mehreren Breiträgen zusammen.  Im Folgenden werden nur diejenigen Mechanismen betrachtet, welche für dieses Experiment von Bedeutung sind. Dazu gehören die \textit{nat\"urliche Linienbreite}, die \textit{\textsc{Doppler}verbreiterung} und die \textit{Druckverbreiterung}.
 
       \subsection{Nat\"urliche Linienbreite}
-      \label{subsec:natueliche-linienbreite}
+      \label{subsec:natürliche-linienbreite}
 
-        Angeregte Zust\"ande haben nur eine endliche Lebensdauer bevor das System wieder in den Grundzustand relaxiert. Nach der \textit{\textsc{Heisenberg}'schen Unsch\"arferelation} k\"onnen Zeit und Energie aber nicht gleichzeitig scharf bestimmt werden. Somit geh\"oren zu Zust\"anden mit begrenzter Lebensdauer unscharfe Energieniveaus. Dies sorgt f\"ur eine Verbreiterung der Spektrallinien. Die Unsch\"arfe aufgrund der sogenannten \textit{nat\"urlichen Linienbreite} ist allerdings f\"ur die optischen C\"asium \"Uberg\"ange, welche in diesem Versuch von Interesse sind, hinreichend klein um die Hyperfeinstruktur aufl\"osen zu k\"onnen.
+        Die \textit{nat\"urliche Linienbreite} wird quantenmechanisch mit der \textsc{Hei\ss{}enberg}'schen Energie-Zeit-Unschärferelation
+        \begin{equation*}
+          \Delta E \cdot \Delta t \ge \frac{\hslash}{2}
+        \end{equation*}
+        begründet, mit der Energieunschärfe $\Delta E$ und der Zeitunschärfe $\Delta t$. Da ein observiertes Photon welches von einem Elekton emittiert wurde den Zeitpunkt des optischen Übergangs einschränkt, ist dessen Frequenz wegen
+        \begin{equation*}
+          \Delta E = \hslash \Delta f
+        \end{equation*}
+        nur bis auf eine Frequenzunschärfe $\Delta f$ definiert. Umgekehrt kann so von Atomen Strahlung mit einer entsprechenden Frequenzunschärfe absorbiert werden. Die \textit{nat\"urliche Linienbreite} kann auch über den klassischen Ansatz eines gedämpften harmonischen Oszillators für das angeregte Elektron gezeigt werden. Eine ausführliche Herleitung bietet geeignete Fachliteratur (z.B. \cite{dem:exp3-linienbreite}).
 
 
-      \subsection{Dopplerverbreiterung}
+      \subsection{\textsc{Doppler}verbreiterung}
       \label{subsec:dopplerverbreiterung}
 
-        Gem\"a\ss dem relativistischen \textsc{Doppler}-Effekt \"andert sich die Frequenz eines einfallenden Photons im Ruhesystem eines (C\"asium-) Atoms, falls das Atom eine Geschwindigkeitskomponente ungleich Null parallel zur Bahn des Photons aufweist. Im Falle von entgegengesetzten Bewegungen von Atom und Photon kommt es zur Blauverschiebung (die vom Atom observierte Frequenz wird gr\"o\ss{}er), im Falle von gleichgerichteten Bewegungen zur Rotverschiebung (die vom Atom observierte Frequenz wird kleiner). Mit dem \textsc{Doppler}-Effekt als Ursache wird diese Linienverbreiterung \textit{\textsc{Doppler}verbreiterung} genannt.
+        Der \textit{\textsc{Doppler}verbreiterung} liegt der realtivistische \textsc{Doppler}-Effekt zugrunde. Bewegt sich ein Atom im Laborsystem mit einer Geschwindigkeitskomponente $v_z\ne 0$ parallel zum emittierten, bzw. absorbierten Photon, so ist die Frequenz des Photons im Laborsystem eine rot-, bzw. blauverschoben. Im Falle von entgegengesetzten Bewegungen von Atom und Photon kommt es zur Blauverschiebung (die vom Atom observierte Frequenz wird gr\"o\ss{}er), im Falle von gleichgerichteten Bewegungen zur Rotverschiebung (die vom Atom observierte Frequenz wird kleiner).
+
+        Die \textit{\textsc{Doppler}verbreiterung} ist etwa $1000$-mal gr\"o\ss{}er als die Verbreiterung durch die \textit{nat\"urliche Linienbreite}. Damit liegt sie in der Gr\"o\ss{}enordnung der Hyperfeinstrukturaufspaltung des angeregten Cäsium-Niveaus und muss bei der Messung eliminiert werden. Das Vorgehen wird in \cref{sec:dopplerfreie-spektroskopie} erläutert.
 
 
-    \section{Transmissionsspektroskopie}
-    \label{sec:transmissionsspektroskopie}
+      \subsubsection{Druckverbreiterung}
+      \label{sssec:druckverbreiterung}
 
+        Im Experiment befinden sich die Cäsiumatome in einem Gas in einer Glasampulle. Je nach Gasdruck in der Gaskammer kommt es zu mehr oder weniger St\"o\ss{}en zwischen den C\"asium-Atomen. Die Wechselwirkung zwischen den Atomen beeinflusst das Termschema und
+        verbreitert damit die Spektrallinien. Die Linienverbreiterung ist proportional zum Druck. Somit kann und wird der Effekt der \textit{Druckverbreiterung} durch einen geringen Druck in der Gaskammer minimiert, sodass die Größenordnung weit unter der der Hyperfeinstrukturaufspaltung liegt.
+
+
+      \subsection{Konfokales \textsc{Fabry-Perot}-Etalon}
+      \label{subsec:fabry-perot-etalon}
+
+
+        Zur Messung der Linienbreite muss ein Spektrum des Lasers aufgezeichnet werden. Um dabei nicht die Vorteile der Schmalbandigkeit eines Lasers zu verlieren, kann hierzu keine einfache Diode verwendet werden. Stattdessen kommt ein \textit{konfokales \textsc{Fabry-Perot}-Etalon} zum Einsatz. Dieses ist aus zwei gegenüberliegenden sphärischen Hohlspiegeln im Abtand $L$ aufgebaut. Der Vorteil der sphärischen Spiegel gegenüber Planspiegeln liegt darin, dass die Empfindlichkeit bezüglich Justierungen der Spiegel minimiert wird und außerdem die Beugungsverluste reduziert. Der exemplarische Aufbau eines \textit{konfokales \textsc{Fabry-Perot}-Etalon} ist in \cref{fig:fabry-perot-etalon} abgebildet und ein Strahlenverlauf eingezeichnet. Geometrisch ist klar, dass Parallel einfallende Strahlen genau dann ihren Weg hinter dem Etalon geradelinig fortsetzen und Interferieren, wenn sie $n\cdot 4$-mal ($n\in\mathbb{N}$) reflektiert werden. Der Krümmungsradius der Spiegel ist gleich dem Abstand der beiden Spiegel $L$. Wenn die Abstände zwischen den Reflektionspunkten und der optischen Achse viel kleiner als der Spiegelabstand sind und weiter für den Winkel zwischen einfallendem Strahl und der optischen Achse $\theta \ll 1$ gilt, dann ist die Bedingung für konstruktive Interferenz gegeben durch
+        \begin{equation*}
+          4L = m \frac{c}{f}.
+        \end{equation*}
+        Die Auflösung von unterschiedlichen Frequenzen $f_n$ und $f_m$, $n,m\in\mathbb{N}$ mit $n\ne m $, ist wegen
+        \begin{equation*}
+          \Delta f= \f_n-f_m=c \frac{n-m}{4L}
+        \end{equation*}
+        sehr gut.
+
+        \begin{figure}[ht]
+          \begin{tikzpicture}
+            \begin{scope}[yshift=+1.5cm]
+              \draw (3,0) arc (150:210:3) node[anchor=north] {Spiegel};
+              \draw (10,0) arc (30:-30:3) node[anchor=north] {Spiegel};
+            \end{scope}
+            \draw (2,0)--(11,0) node[anchor=west] {Optische Achse};
+            \draw[color=red, <-] (2.5,0.74)--(1,0.74) node[anchor=east] {einfallend};
+            \draw[color=red, ->] (3,0.74)--(10,0.74);
+            \draw[color=red, ->] (10.5,0.74)--(12,0.74) node[anchor=south west] {transmittiert};
+            \draw[color=red, ->] (9.6,0.75-0.4*1.5/7)--(3.4,-0.75+0.4*1.5/7);
+            \draw[color=red, ->] (2.5,-0.75-0.3*1.5/7)--(1,-0.75-2*1.5/7) node[anchor=east] {transmittiert};
+            \draw[color=red, ->] (3,-0.75)--(10,-0.75);
+            \draw[color=red, ->] (10.5,-0.75)--(12,-0.75) node[anchor=west] {transmittiert};
+            \draw[color=red, ->] (9.6,-0.75+0.4*1.5/7)--(3.4,0.75-0.4*1.5/7);
+            \draw[color=red, ->] (2.5,0.75+0.3*1.5/7)--(1,0.75+2*1.5/7) node[anchor=east] {transmittiert};
+            \draw[color=red, ->] (3,0.76)--(10,0.76);
+            \draw[color=red, ->] (10.5,0.76)--(12,0.76) node[anchor=north west] {transmittiert};
+          \end{tikzpicture}
+          \caption{Aufbau eines \textit{\textsc{Fabry-Perot}-Etalons} aus zwei sphärischen Hohlspiegeln. Zusätzlich ist der Strahlengang eines einfallenden Lichtstrahls eingezeichnet. Nach $n\cdot 4$, $n\in\mathbb{N}$ Reflektionen setzt der Strahl seinen Weg hinter dem Interferometer geradlinig fort. Weitere Ausführungen in \cref{subsec:fabry-perot-etalon}.}
+          \label{fig:fabry-perot-etalon}
+        \end{figure}
+
+
+      \subsection{Transmissionsspektroskopie}
+      \label{subsec:transmissionsspektroskopie}
+
+        Nun muss noch eine Messung durchgeführt werden. Für diese bedient sich das Experiment der \textit{Transmissionsspektroskopie}. Bei dieser Methode wird das Spektrum der durch die mit Cäsium gefüllte Gaskammer transmittierten Lichts gemessen. Die Resonanzfrequenzen von Cäsium erscheinen damit als Minima im aufgezeichneten Spektrum. Wie in \cref{sec:linienbreite} erläutert liegen die Minima der Frequenzen aber verbreitert vor, sodass nun die Linienbreite des verwendeten Lasers bestimmt werden kann.
+
+
+      \subsection{Linienbreite des verwendeten Diodenlasers}
+      \label{subsec:linienbreite-laser}
+
+        
 
 
 
