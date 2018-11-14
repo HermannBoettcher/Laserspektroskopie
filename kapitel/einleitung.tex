@@ -155,6 +155,7 @@
         durchgef\"uhrt. W\"ahrend die Anzeige des Regelungsinstruments den Wert laut technischer Daten pr\"aziser angibt, ist das Ger\"at seit Jahren nicht geeicht geworden. Deshalb dient die Anzeige nur als Anhaltspunkt, bzw. f\"ur Temperaturdifferenzen, jedoch nicht f\"ur absolute Temperaturmessungen. Dementsprechen gro\ss{} ist der Fehler mit $\SI{2}{\celsius}$  gew\"ahlt.
 
         \begin{figure}[tb]
+          \centering
           \begin{tikzpicture}
               \def\Imin{0}
       				\def\Imax{100}
@@ -279,6 +280,7 @@
       \label{subsec:linienbreite-laser}
 
         \begin{figure}[tb]
+          \centering
            \begin{tikzpicture}
                \def\Vmin{0}
                \def\Vmax{12}
@@ -291,7 +293,7 @@
                  height=0.5*\textwidth,
                  every axis plot,
                  grid,
-                 legend style={at={(1,0.5)}, legend columns=1, anchor=south east},
+                 legend style={at={(1,0.5)}, legend columns=1, anchor=north east},
                  axis y line*=left,
                  xmin = \tmin, xmax = \tmax,
                  ymin = \Vmin, ymax = \Vmax,
@@ -311,7 +313,7 @@
                  width=0.8*\textwidth,
                  height=0.5*\textwidth,
                  axis y line*=right,
-                 legend style={at={(1,0.5)}, legend columns=1, anchor=north east},
+                 legend style={at={(1,0.5)}, legend columns=1, anchor=south east},
                  ymajorgrids=true,
                  xmin = \tmin, xmax = \tmax,
                  ymin = -50, ymax = 40,
@@ -327,16 +329,16 @@
            \label{fig:linienbreite-plot}
         \end{figure}
 
-        \Cref{fig:linienbreite-plot} zeigt die Daten der dopplerfreien Messung zur Bestimmung der Linienbreite des Lasers. Ch1 ist das Signal vor dem \textit{Fabry-Perot-Etalon}, ch2 das hinter dem Etalon und ch3 ist die Aufzeichnung der Spannungsmodulation des Netzteils des Diodenlasers. Zunächst wird ch2 betrachtet.
+        \Cref{fig:linienbreite-plot} zeigt die Daten der dopplerfreien Messung zur Bestimmung der Linienbreite des Lasers. Ch1 ist das Signal vor dem \textit{Fabry-Perot-Etalon}, ch2 das hinter dem Etalon und ch3 ist die Aufzeichnung der Spannungsmodulation des Piezoelements zur Veränderung der Länge des \textit{Fabry-Perot-Etalons}. Zunächst wird ch2 betrachtet.
 
-        Es erscheinen fünf Maxima. Während die Spannung monoton steigend oder fallend durchgefahren wird ändert sich die Frequenz des Laserlichts gleichgerichtet. Damit repräsentiert der Abstand zwischen zwei Maxima über einem monton steigenden/ fallenden Signal von ch3 $\Delta t_\mathrm{FPE}$ gerade den freien Spektralbereich des \textit{Fabry-Perot-Etalons} $Delta f_\mathrm{FPE}$ (vgl. \cref{eq:freier-spektralbereich}).
+        Es erscheinen fünf Maxima. Der Abstand zwischen zwei Maxima über einem monton steigenden/ fallenden Signal von ch3 $\Delta t_\mathrm{FPE}$ enspricht gerade dem freien Spektralbereich des \textit{Fabry-Perot-Etalons} $Delta f_\mathrm{FPE}$ (vgl. \cref{eq:freier-spektralbereich}).
 
-        Damit ist die \textit{Linienbreite} des Lasers ist gegeben durch den Zusammenhang
+        Damit ist die \textit{Linienbreite} des Lasers gegeben durch den Zusammenhang
         \begin{equation}
           \Delta f_\mathrm{Laser} = \frac{\Delta f_\mathrm{FPE}}{\Delta t_\mathrm{FPE}}\cdot \Delta t_\mathrm{FWHM},
           \label{eq:deltaf-laser}
         \end{equation}
-        mit der Halbwertsbreite
+        mit der Halbwertsbreite der Maxima von ch2
         \begin{equation*}
           \Delta t_\mathrm{FWHM}=\frac{1}{2\sqrt{2\ln 2}\sigma}.
         \end{equation*}
@@ -344,19 +346,19 @@
 
         Durch Einsetzen in \cref{eq:deltaf-laser} folgen die Werte
         \begin{align*}
-          \Delta f_\mathrm{Laser}^\mathrm{aufsteigend, links}=\SI{10,81(59)}{\mega\hertz} \\
-          \Delta f_\mathrm{Laser}^\mathrm{aufsteigend, rechts}=\SI{8,30(32)}{\mega\hertz} \\
-          \Delta f_\mathrm{Laser}^\mathrm{absteigend, links}=\SI{11,59(41)}{\mega\hertz} \\
-          \Delta f_\mathrm{Laser}^\mathrm{absteigend, rechts}=\SI{13,85(58)}{\mega\hertz}.
+          \Delta f_\mathrm{Laser}^\mathrm{aufsteigend, links}&\approx\SI{10,81(59)}{\mega\hertz} \\
+          \Delta f_\mathrm{Laser}^\mathrm{aufsteigend, rechts}&\approx\SI{8,30(32)}{\mega\hertz} \\
+          \Delta f_\mathrm{Laser}^\mathrm{absteigend, links}&\approx\SI{11,59(41)}{\mega\hertz} \\
+          \Delta f_\mathrm{Laser}^\mathrm{absteigend, rechts}&\approx\SI{13,85(58)}{\mega\hertz}.
         \end{align*}
         Mitteln der zusammengehörenden Werte liefert dann
         \begin{align*}
-          \Delta f_\mathrm{Laser}^\mathrm{aufsteigend}=\SI{9,56(34)}{\mega\hertz} \\
-          \Delta f_\mathrm{Laser}^\mathrm{absteigend}=\SI{12,72(36)}{\mega\hertz} ,
+          \Delta f_\mathrm{Laser}^\mathrm{aufsteigend}&\approx\SI{9,56(34)}{\mega\hertz} \\
+          \Delta f_\mathrm{Laser}^\mathrm{absteigend}&\approx\SI{12,72(36)}{\mega\hertz} ,
         \end{align*}
-        und noch einmal mitteln führt zu
+        und noch einmal mitteln f\"uhrt zu
         \begin{equation*}
-          \Delta f_\mathrm{Laser}=\SI{11.14(25)}{\mega\hertz}.
+          \Delta f_\mathrm{Laser}\approx\SI{11.14(25)}{\mega\hertz}.
         \end{equation*}
 
         \begin{table}
@@ -376,9 +378,93 @@
 
 
 
-    \section{Spektren blabla}
+    \section{Dopplerverbreitertes Spektrum}
+
+      \Cref{fig:dopplerverbreitertes-spektrum} zeigt das dopplerverbreiterte Spektrum. Betrachtet werden die zwei Minima von ch1, welche über dem homogenen Ansteig von ch3 liegen. Das linke Minimum des Transmissionsspektrums gehört zum Grundzustand $\mathrm{6^2S_{1/2}}$, das Rechte zum angeregten Zustand $\mathrm{6^2P_{3/2}}$. Die in \cref{fig:feinstruktur-hyperfeinstruktur} abgebildete Hyperfeinstrukturaufspaltung ist im Spektrum nicht zu erkennen. Mithilfe der im vorherigen Abschnitt durchgeführten Kalibrierung lässt sich nun der Frequenzabstand zwischen Grundzustand und angeregtem Zustand
+      \begin{equation*}
+        \Delta f_\mathrm{6^2S_{1/2}}^\mathrm{6^2P_{3/2}} = \frac{\Delta f_\mathrm{FPE}}{\Delta t_\mathrm{FPE}}\cdot \Delta t_\mathrm{6^2S_{1/2}}^\mathrm{6^2P_{3/2}}
+      \end{equation*}
+      berechnen.
+      \begin{equation*}
+        \Delta t_\mathrm{6^2S_{1/2}}^\mathrm{6^2P_{3/2}}= \SI{6,9472(87)}{\milli\second}
+      \end{equation*}
+      ergibt sich aus den Fitparametern eines zweifachen Gau\ss{}fits von ch1 (vgl. \cref{fig:dopplerverbreitertes-spektrum} und \cref{subsec:fit-transminima-dopplerverbreitert}). Hierbei werden die beiden stark ausgeprägten Minima über dem monoton ansteigenden Spannungssignal ch3 betrachtet. Ein zweiundzwanzigfacher Gau\ss{}fit der Maxima von ch2 über demselben Zweig von ch3 erleichtert das Zählen der Maxima, welche sich zwischen den Minima von ch1 befinden, 17 an der Zahl. Damit folgt der Frequenzabstand
+      \begin{equation*}
+        \Delta f_\mathrm{6^2S_{1/2}}^\mathrm{6^2P_{3/2}} = 17 \cdot \Delta f_\mathrm{FPE} = \SI{10,19286}{\giga\hertz}
+      \end{equation*}
+
+
+      \begin{figure}[tb]
+        \centering
+        \begin{tikzpicture}
+            \def\Vmin{0}
+            \def\Vmax{12}
+            \def\tmin{-7}
+            \def\tmax{7}
+            %
+            \begin{axis}[
+              /tikz/line join=bevel,
+              width=0.8*\textwidth,
+              height=0.5*\textwidth,
+              every axis plot,
+              grid,
+              legend style={at={(0,1)}, legend columns=1, anchor=north west},
+              axis y line*=left,
+              xmin = \tmin, xmax = \tmax,
+              ymin = -40, ymax = 10,
+              xlabel = {Zeit $t$ in $\si{\milli\second}$},
+              ylabel = {Spannung $V_\mathrm{ch1}$ in $\si{\milli\volt}$},
+              ]
+              % Add plots
+              \addplot[color = red, only marks, mark options={scale=0.1}, line width = 1pt]
+              table [x=t, y=ch1]{data/dopplerverbreiter.txt};
+              \addlegendentry{ch1}
+              \addplot[color = red!50, line width = 1pt]
+              table [x=t, y=fitch1]{data/dopplerverbreiter.txt};
+              \addlegendentry{ch1 fit}
+            \end{axis}
+            \begin{axis}[
+              /tikz/line join=bevel,
+              width=0.8*\textwidth,
+              height=0.5*\textwidth,
+              axis y line*=right,
+              legend style={at={(1,1)}, legend columns=1, anchor=north east},
+              ymajorgrids=true,
+              xmin = \tmin, xmax = \tmax,
+              ymin = 0, ymax = 17.5,
+              ylabel = {Spannung $V_\mathrm{ch3}$ in $\si{\volt}$},
+              ]
+              % Add plots
+              \addplot[color = blue, only marks, mark options={scale=0.1}, line width = 1pt]
+              table [x=t, y=ch2]{data/dopplerverbreiter.txt};
+              \addlegendentry{ch2}
+              \addplot[color = blue!50, line width = 1pt]
+              table [x=t, y=fitch2]{data/dopplerverbreiter.txt};
+              \addlegendentry{ch2 fit}
+            \end{axis}
+            \begin{axis}[
+              /tikz/line join=bevel,
+              width=0.8*\textwidth,
+              height=0.5*\textwidth,
+              axis line style={draw=none},
+              ticks=none,
+              legend style={at={(1,0)}, legend columns=1, anchor=south east},
+              xmin = \tmin, xmax = \tmax,
+              ymin = -10, ymax = 70
+              ]
+              % Add plots
+              \addplot[color = green, only marks, mark options={scale=0.1}, line width = 1pt]
+              table [x=t, y=ch3]{data/dopplerverbreiter.txt};
+              \addlegendentry{ch3}
+            \end{axis}
+        \end{tikzpicture}
+        \caption{}
+        \label{fig:dopplerverbreitertes-spektrum}
+      \end{figure}
+
 
       \begin{figure}
+        \centering
         \begin{tikzpicture}
             \def\Vmin{0}
             \def\Vmax{12}
@@ -421,52 +507,6 @@
             \end{axis}
         \end{tikzpicture}
         \caption{Dopplerverbreitertes Spektrum. Sichtbar sind die Transmissionsminima der Spannung $V_\mathrm{ch1}$. }
-        \label{}
-      \end{figure}
-
-      \begin{figure}
-        \begin{tikzpicture}
-            \def\Vmin{0}
-            \def\Vmax{12}
-            \def\tmin{-7}
-            \def\tmax{7}
-            %
-            \begin{axis}[
-              /tikz/line join=bevel,
-              width=0.8*\textwidth,
-              height=0.5*\textwidth,
-              every axis plot,
-              grid,
-              legend style={at={(0,1)}, legend columns=1, anchor=north west},
-              axis y line*=left,
-              xmin = \tmin, xmax = \tmax,
-              ymin = -40, ymax = 10,
-              xlabel = {Zeit $t$ in $\si{\milli\second}$},
-              ylabel = {Spannung $V_\mathrm{ch2}$ in $\si{\milli\volt}$},
-              ]
-              % Add plots
-              \addplot[color = red, only marks, mark options={scale=0.2}, line width = 1pt]
-              table [x=t, y=ch1]{data/dopplerverbreiter.txt};
-              \addlegendentry{Ch1}
-            \end{axis}
-            \begin{axis}[
-              /tikz/line join=bevel,
-              width=0.8*\textwidth,
-              height=0.5*\textwidth,
-              axis y line*=right,
-              legend style={at={(1,1)}, legend columns=1, anchor=north east},
-              ymajorgrids=true,
-              xmin = \tmin, xmax = \tmax,
-              ymin = 0, ymax = 17.5,
-              ylabel = {Spannung $V_\mathrm{ch3}$ in $\si{\volt}$},
-              ]
-              % Add plots
-              \addplot[color = blue, only marks, mark options={scale=0.2}, line width = 1pt]
-              table [x=t, y=ch2]{data/dopplerverbreiter.txt};
-              \addlegendentry{Ch2}
-            \end{axis}
-        \end{tikzpicture}
-        \caption{}
         \label{}
       \end{figure}
 
