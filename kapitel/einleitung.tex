@@ -380,7 +380,9 @@
 
     \section{Dopplerverbreitertes Spektrum}
 
-      \Cref{fig:dopplerverbreitertes-spektrum} zeigt das dopplerverbreiterte Spektrum. Betrachtet werden die zwei Minima von ch1, welche über dem homogenen Ansteig von ch3 liegen. Das linke Minimum des Transmissionsspektrums gehört zum Grundzustand $\mathrm{6^2S_{1/2}}$, das Rechte zum angeregten Zustand $\mathrm{6^2P_{3/2}}$. Die in \cref{fig:feinstruktur-hyperfeinstruktur} abgebildete Hyperfeinstrukturaufspaltung ist im Spektrum nicht zu erkennen. Mithilfe der im vorherigen Abschnitt durchgeführten Kalibrierung lässt sich nun der Frequenzabstand zwischen Grundzustand und angeregtem Zustand
+      \Cref{fig:dopplerverbreitertes-spektrum} zeigt das dopplerverbreiterte Spektrum. Wie erwartet sind nur einzelne tiefe Minima in der Messung vor dem \textit{Fabry-Perot-Etalon} zu sehen - nicht mehrere eng beieinander liegende Minima wie sie nach der Hyperfeinstrukturaufspaltung zu erwarten sind. Der Grund ist, dass die Aufspaltung innerhalb der dopplerverbreiterten Minima liegt, wie bei den dopplerfreien Spektren der einzelnen Minima erkennbar werden wird.
+
+      Betrachtet werden nun die zwei Minima von ch1, welche über dem homogenen Ansteig von ch3 liegen. Das linke Minimum des Transmissionsspektrums gehört zum Grundzustand $\mathrm{6^2S_{1/2}}$, das Rechte zum angeregten Zustand $\mathrm{6^2P_{3/2}}$. Die in \cref{fig:feinstruktur-hyperfeinstruktur} abgebildete Hyperfeinstrukturaufspaltung ist im Spektrum nicht zu erkennen. Mithilfe der im vorherigen Abschnitt durchgeführten Kalibrierung lässt sich nun der Frequenzabstand zwischen Grundzustand und angeregtem Zustand
       \begin{equation*}
         \Delta f_\mathrm{6^2S_{1/2}}^\mathrm{6^2P_{3/2}} = \frac{\Delta f_\mathrm{FPE}}{\Delta t_\mathrm{FPE}}\cdot \Delta t_\mathrm{6^2S_{1/2}}^\mathrm{6^2P_{3/2}}
       \end{equation*}
@@ -461,55 +463,6 @@
         \caption{}
         \label{fig:dopplerverbreitertes-spektrum}
       \end{figure}
-
-
-      \begin{figure}
-        \centering
-        \begin{tikzpicture}
-            \def\Vmin{0}
-            \def\Vmax{12}
-            \def\tmin{-7}
-            \def\tmax{7}
-            %
-            \begin{axis}[
-              /tikz/line join=bevel,
-              width=0.8*\textwidth,
-              height=0.5*\textwidth,
-              every axis plot,
-              grid,
-              legend style={at={(0,0.5)}, legend columns=1, anchor=north west},
-              axis y line*=left,
-              xmin = \tmin, xmax = \tmax,
-              ymin = -40, ymax = 10,
-              xlabel = {Zeit $t$ in $\si{\milli\second}$},
-              ylabel = {Spannung $V_\mathrm{ch1}$ in $\si{\milli\volt}$},
-              ]
-              % Add plots
-              \addplot[color = red, only marks, mark options={scale=0.2}, line width = 1pt]
-              table [x=t, y=ch1]{data/dopplerverbreiter.txt};
-              \addlegendentry{ch1}
-            \end{axis}
-            \begin{axis}[
-              /tikz/line join=bevel,
-              width=0.8*\textwidth,
-              height=0.5*\textwidth,
-              axis y line*=right,
-              legend style={at={(0,0.5)}, legend columns=1, anchor=south west},
-              ymajorgrids=true,
-              xmin = \tmin, xmax = \tmax,
-              ymin = 0, ymax = 17.5,
-              ylabel = {Spannung $V_\mathrm{ch2}$ in $\si{\volt}$},
-              ]
-              % Add plots
-              \addplot[color = blue, only marks, mark options={scale=0.2}, line width = 1pt]
-              table [x=t, y=ch2]{data/dopplerverbreiter.txt};
-              \addlegendentry{ch2}
-            \end{axis}
-        \end{tikzpicture}
-        \caption{Dopplerverbreitertes Spektrum. Sichtbar sind die Transmissionsminima der Spannung $V_\mathrm{ch1}$. }
-        \label{}
-      \end{figure}
-
 
 
     \section{Dopplerfreie Spektroskopie}
