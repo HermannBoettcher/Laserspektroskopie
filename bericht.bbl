@@ -20,7 +20,7 @@
   \entry{dem:exp3-linienbreite}{inbook}{}
     \name{author}{1}{}{%
       {{hash=DW}{%
-         family={Demtröder},
+         family={Demtr\"oder},
          familyi={D\bibinitperiod},
          given={Wolfgang},
          giveni={W\bibinitperiod},
@@ -28,7 +28,7 @@
     }
     \name{editor}{1}{}{%
       {{hash=DW}{%
-         family={Demtröder},
+         family={Demtr\"oder},
          familyi={D\bibinitperiod},
          given={Wolfgang},
          giveni={W\bibinitperiod},
@@ -45,7 +45,7 @@
     \field{sortinithash}{D}
     \field{chapter}{7}
     \field{pages}{226 ff.}
-    \field{title}{Experimentalphysik 3: Atome, Moleküle und Festkörper}
+    \field{title}{Experimentalphysik 3: Atome, Molek\"ule und Festk\"orper}
     \field{year}{2015}
   \endentry
 \enddatalist
