@@ -369,27 +369,31 @@
       \section{Transmissionsspektroskopie}
       \label{sec:transmissionsspektroskopie}
 
-        F\"ur diese bedient sich das Experiment der \textit{dopplerfreien Spektroskopie}. Zun\"achst muss zu deren Verst\"andniss die Transmissionsspektroskopie erkl\"art werden. Bei dieser Methode wird das Spektrum der durch die mit C\"asium gef\"ullte Gaskammer transmittierten Lichts gemessen. Die Resonanzfrequenzen von C\"asium erscheinen damit als Minima im aufgezeichneten Spektrum. Wie in \cref{sec:linienbreite} erl\"autert liegen die Minima der Frequenzen aber verbreitert vor, wobei mehrere Resonanzfrequenzen der Hyperfeinstrukturaufspaltung des angeregten niveaus in der Dopplerverbreiterung liegen.
-        \medskip
-
-        F\"ur die dopplerfreie Spektroskopie wird der Laserstrahl nun geteilt und antiparallel durch die Gaskammer geleitet. Derjenige Strahl, welcher analysiert wird (in diesem Fall mit dem \textit{Fabry-Perot-Etalon}), heißt \textit{Abfragestrahl}. Der andere ist der \textit{Anregestrahl}. Nun werden zwei Messungen durchgef\"uhrt. Einmal wird der \textit{Anregestrahl} geblockt, und einmal nicht. Im ersten Fall ensteht so ein dopplerverbreitertes Spektrum gem\"aß der Transmissionsspektroskopie. Im zweiten Fall aber regt der \textit{Anregestrahl} die C\"asiumatome in der Gaskammer an. Ist die Intensit\"at hinreichend hoch, so wird der Grundzustand entv\"olkert und der angeregte Zustand \"uberv\"olkert. Damit kann der \textit{Abfragestrahl} kaum noch Atome anregen und transmittiert fast ungehindert.
+        Zum Erstellen eines Termschemas von C\"asium werden Transmissionsspektren aufgenommen. Hierbei transmittiert der Laserstrahl durch die C\"asiumgaskammer und wird anschließend mit einer Diode erfasst. Erwartet werden Transmissionsminima an Stelle der Resonanzfrequenzen des C\"asiums, da hier Photonen die in \cref{fig:feinstruktur-hyperfeinstruktur} gezeigten \"Uberg\"ange der Atome anregen können und dabei absorbiert werden.
 
 
       \subsection{Dopplerverbreitertes Spektrum}
+      \label{subsec:dopplerverbreitertes-spektrum}
 
-        \Cref{fig:dopplerverbreitertes-spektrum} zeigt das dopplerverbreiterte Spektrum. Wie erwartet sind nur einzelne tiefe Minima in der Messung vor dem \textit{Fabry-Perot-Etalon} zu sehen - nicht mehrere eng beieinander liegende Minima wie sie nach der Hyperfeinstrukturaufspaltung zu erwarten sind. Der Grund ist, dass die Aufspaltung innerhalb der dopplerverbreiterten Minima liegt, wie bei den dopplerfreien Spektren der einzelnen Minima erkennbar werden wird.
+        \Cref{fig:dopplerverbreitertes-spektrum} zeigt das dopplerverbreiterte Spektrum. Wie aufgrund der Dopplerverbreiterung (vgl. \cref{subsec:dopplerverbreiterung}) erwartet sind nur einzelne tiefe Minima im Spektrum zu sehen - nicht mehrere eng beieinander liegende Minima wie sie nach der Hyperfeinstrukturaufspaltung (vgl. \cref{sec:hyperfeinstruktur}) zu erwarten sind.
+        Somit kann die Hyperfeinstruktur hier nicht untersucht werden. Im Folgenden soll die Feinstrukturaufspaltung vermessen werden. Dazu werden die beiden Minima vom Transmissionsspektrum ch1 betachtet, welche in \cref{fig:dopplerverbreitertes-spektrum} abgebildet sind. Diese befinden sich über einer einzelnen Rampe der Modulationsspannung des Netzteils.
 
-        Betrachtet werden nun die zwei Minima von ch1, welche \"uber dem homogenen Ansteig von ch3 liegen. Das linke Minimum des Transmissionsspektrums geh\"ort zum Grundzustand $\mathrm{6^2S_{1/2}}$, das Rechte zum angeregten Zustand $\mathrm{6^2P_{3/2}}$. Die in \cref{fig:feinstruktur-hyperfeinstruktur} abgebildete Hyperfeinstrukturaufspaltung ist im Spektrum nicht zu erkennen. Mithilfe der im vorherigen Abschnitt durchgef\"uhrten Kalibrierung l\"asst sich nun der Frequenzabstand zwischen Grundzustand und angeregtem Zustand
+        Das linke Minimum des Transmissionsspektrums geh\"ort zum Grundzustand $\mathrm{6^2S_{1/2}}$, das Rechte zum angeregten Zustand $\mathrm{6^2P_{3/2}}$. Für den Frequenzabstand zwischen Grundzustand und angeregtem Zustand$\Delta f_\mathrm{6^2S_{1/2}}^\mathrm{6^2P_{3/2}}$ gilt analog zu \cref{eq:deltaf-laser}
         \begin{equation*}
-          \Delta f_\mathrm{6^2S_{1/2}}^\mathrm{6^2P_{3/2}} = \frac{\Delta f_\mathrm{FPE}}{\Delta t_\mathrm{FPE}}\cdot \Delta t_\mathrm{6^2S_{1/2}}^\mathrm{6^2P_{3/2}}
+          \Delta f_\mathrm{6^2S_{1/2}}^\mathrm{6^2P_{3/2}} = \frac{\Delta f_\mathrm{FPE}}{\Delta t_\mathrm{FPE}}\cdot \Delta t_\mathrm{6^2S_{1/2}}^\mathrm{6^2P_{3/2}}.
         \end{equation*}
-        berechnen.
         \begin{equation*}
           \Delta t_\mathrm{6^2S_{1/2}}^\mathrm{6^2P_{3/2}}= \SI{6,9472(87)}{\milli\second}
         \end{equation*}
-        ergibt sich aus den Fitparametern eines zweifachen Gau\ss{}fits von ch1 (vgl. \cref{fig:dopplerverbreitertes-spektrum} und \cref{subsec:fit-transminima-dopplerverbreitert}). Hierbei werden die beiden stark ausgepr\"agten Minima \"uber dem monoton ansteigenden Spannungssignal ch3 betrachtet. Ein zweiundzwanzigfacher Gau\ss{}fit der Maxima von ch2 \"uber demselben Zweig von ch3 erleichtert das Z\"ahlen der Maxima, welche sich zwischen den Minima von ch1 befinden, 17 an der Zahl. Damit folgt der Frequenzabstand
+        ist hierbei der zeitliche Abstand zwischen den beiden angesprochenen Minima. Ein zweiundzwanzigfacher Gau\ss{}fit der Maxima von ch2 \"uber demselben Zweig von ch3 dient der Berechnung von
         \begin{equation*}
-          \Delta f_\mathrm{6^2S_{1/2}}^\mathrm{6^2P_{3/2}} = 17 \cdot \Delta f_\mathrm{FPE} = \SI{10,19286}{\giga\hertz}
+          Delta t_\mathrm{FPE}=\SI{0,4087(1)}{\milli\second}.
+        \end{equation*}
+        Dazu wurde der zeitliche Abstand zwischen dem ersten Auftretenden Maximum (1) und dem letzten (22) mithilfe der Fitparameter (\cref{subsec:fit-freier-spektralbereich-dopplerverbreitert}) durch $(22-1)$ Abstände geteilt.
+
+        Somit ergibt sich der Frequenzabstand zu
+        \begin{equation*}
+          \Delta f_\mathrm{6^2S_{1/2}}^\mathrm{6^2P_{3/2}} = \SI{10,19(2)}{\giga\hertz}.
         \end{equation*}
 
 
@@ -458,6 +462,9 @@
 
       \subsection{Dopplerfreies Spektrum}
 
+
+
+        F\"ur die dopplerfreie Spektroskopie wird der Laserstrahl nun geteilt und antiparallel durch die Gaskammer geleitet. Derjenige Strahl, welcher analysiert wird (in diesem Fall mit dem \textit{Fabry-Perot-Etalon}), heißt \textit{Abfragestrahl}. Der andere ist der \textit{Anregestrahl}. Nun werden zwei Messungen durchgef\"uhrt. Einmal wird der \textit{Anregestrahl} geblockt, und einmal nicht. Im ersten Fall ensteht so ein dopplerverbreitertes Spektrum gem\"aß der Transmissionsspektroskopie. Im zweiten Fall aber regt der \textit{Anregestrahl} die C\"asiumatome in der Gaskammer an. Ist die Intensit\"at hinreichend hoch, so wird der Grundzustand entv\"olkert und der angeregte Zustand \"uberv\"olkert. Damit kann der \textit{Abfragestrahl} kaum noch Atome anregen und transmittiert fast ungehindert.
 
 
     \section{Zeeman-Effekt}
